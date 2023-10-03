@@ -25,10 +25,12 @@ import FramesSection from "../Components/FramesSection";
 import HomeCollectionSection from "../Components/HomeCollectionSection";
 import ThreeFramesSection from "../Components/ThreeFramesSection";
 import SmallFramesSection from "../Components/SmallFramesSection";
+import VideoPreloader from "../Components/VideoPreloader";
 
 const Home = () => {
   return (
     <>
+      <VideoPreloader />
       <NavBar />
 
       <HeroSection />
