@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+body {
+  background: #fff;
+}
+
+/* CSS for the cart animation */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 10px 10px 11px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 10px 11px -7px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 11px -7px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: 0.3s ease-in-out;
+}
