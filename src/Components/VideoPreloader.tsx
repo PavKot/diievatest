@@ -32,10 +32,10 @@ function VideoPreloader() {
     >
       <video
         id="preload-video"
-        autoPlay
-        loop
-        muted
-        playsInline
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        playsInline={true}
         style={{
           objectFit: "cover",
           width: "100%",
