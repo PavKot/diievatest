@@ -7,7 +7,7 @@ const Good = () => {
   return (
     <>
       <NavBar />
-      <GoodLayout />
+
       <Footer />
     </>
   );

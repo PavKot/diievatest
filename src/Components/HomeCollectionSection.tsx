@@ -7,14 +7,17 @@ interface Props {
   image1hover: string;
   name1: string;
   price1: string;
+  link1: string;
   image2: string;
   image2hover: string;
   name2: string;
   price2: string;
+  link2: string;
   image3: string;
   image3hover: string;
   name3: string;
   price3: string;
+  link3: string;
 }
 
 const HomeCollectionSection: React.FC<Props> = ({
@@ -23,14 +26,17 @@ const HomeCollectionSection: React.FC<Props> = ({
   image1hover,
   name1,
   price1,
+  link1,
   image2,
   image2hover,
   name2,
   price2,
+  link2,
   image3,
   image3hover,
   name3,
   price3,
+  link3,
 }: Props) => {
   return (
     <section className="pt-[40px] max-w-[300px] sm:container mx-auto">
@@ -45,18 +51,21 @@ const HomeCollectionSection: React.FC<Props> = ({
           price={price1}
           image={image1}
           imageHover={image1hover}
+          link={link1}
         />
         <ProductCard
           name={name2}
           price={price2}
           image={image2}
           imageHover={image2hover}
+          link={link2}
         />
         <ProductCard
           name={name3}
           price={price3}
           image={image3}
           imageHover={image3hover}
+          link={link3}
         />
       </div>
     </section>

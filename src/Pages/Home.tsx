@@ -39,12 +39,15 @@ const Home = () => {
         image1={card1}
         image1hover={card1hover}
         name1="Жакет з вовни / Бежевий"
+        link1="/good1"
         price1="Price"
         image2={card2}
         image2hover={card2hover}
         name2="Корсет з кісточками \ Темно - зелений "
+        link2="/good2"
         price2="Price"
         image3={card3}
+        link3="/good3"
         image3hover={card3hover}
         name3="Пальто чорне"
         price3="Price"
@@ -54,6 +57,7 @@ const Home = () => {
       <HomeCollectionSection
         collectionName="FW 2023 Drop Fall"
         image1={card4}
+        link1="/good1"
         image1hover={card4hover}
         name1="Костюм на шнурівці / Синій "
         price1="Price"
@@ -61,25 +65,30 @@ const Home = () => {
         image2hover={card5hover}
         name2="Брюки палаццо бежевий з вовни"
         price2="Price"
+        link2="/good2"
         image3={card6}
         image3hover={card6hover}
         name3="Кроп-жакет \ Темно-зелений"
         price3="Price"
+        link3="/good3"
       />
       <HomeCollectionSection
         collectionName="FW 2023 Drop Fall"
         image1={card7}
         image1hover={card7hover}
+        link1="/good1"
         name1="Кюлоти  з завищеною талією \ Cині "
         price1="Price"
         image2={card8}
         image2hover={card8hover}
         name2="Бомбер"
+        link2="/good2"
         price2="Price"
         image3={card9}
         image3hover={card9hover}
         name3="Костюм / Чорний"
         price3="Price"
+        link3="/good3"
       />
       <ThreeFramesSection />
       <SmallFramesSection />

@@ -15,37 +15,57 @@ interface Product {
   price: string;
   image: string;
   imageHover: string;
+  link: string;
 }
-const GoodLayout = () => {
+
+interface Props {
+  name: string;
+  price: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  image4: string;
+  image5: string;
+  path: string;
+}
+const GoodLayout: React.FC<Props> = ({
+  name,
+  price,
+
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  path,
+}: Props) => {
   const product: Product = productData.product1;
 
   return (
     <>
       <div className="flex justify-between container mx-auto">
         <div>
-          <p className="text-[#7B7B7B] font-roboto text-[14px]">
-            DIIEVA / Каталог / Спідниці / Спідниця міді з асемитричним розрізом
-          </p>
+          <p className="text-[#7B7B7B] font-roboto text-[14px]">{path}</p>
         </div>
       </div>
       <div className="flex container mx-auto gap-5 flex-col lg:flex-row">
         <div className="flex flex-col">
           <div className="flex items-center flex-col lg:flex-row">
-            <img src={good1_1} alt="Спідниця міді з асемитричним розрізом" />
-            <img src={good1_2} alt="Спідниця міді з асемитричним розрізом" />
+            <img src={image1} alt="Спідниця міді з асемитричним розрізом" />
+            <img src={image2} alt="Спідниця міді з асемитричним розрізом" />
           </div>
           <div className="flex items-center flex-col lg:flex-row">
-            <img src={good1_3} alt="Спідниця міді з асемитричним розрізом" />
-            <img src={good1_4} alt="Спідниця міді з асемитричним розрізом" />
-            <img src={good1_5} alt="Спідниця міді з асемитричним розрізом" />
+            <img src={image3} alt="Спідниця міді з асемитричним розрізом" />
+            <img src={image4} alt="Спідниця міді з асемитричним розрізом" />
+            {image5 != "none" && (
+              <img src={image5} alt="Спідниця міді з асемитричним розрізом" />
+            )}
           </div>
         </div>
         <div className="max-w-[500px] p-5 lg:p-0">
-          <h1 className="font-roboto font-bold text-[24px]">
-            Спідниця міді з асиметричним розрізом \ Темно - зелена
-          </h1>
+          <h1 className="font-roboto font-bold text-[24px]">{name}</h1>
           <h1 className="font-roboto font-bold text-[24px] pt-[35px]">
-            Price UAH
+            {price} UAH
           </h1>
           <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px]"></div>
           <p className="text-[#7B7B7B] font-roboto text-[14px] flex items-center gap-3 pt-[30px]">
@@ -140,6 +160,7 @@ const GoodLayout = () => {
             price={product.price}
             image={product.image}
             imageHover={product.imageHover}
+            link={product.link}
           />
         </div>
       </div>

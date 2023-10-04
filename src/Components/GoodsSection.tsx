@@ -27,12 +27,14 @@ const GoodsSection = () => {
             imageHover: string;
             name: string;
             price: string;
+            link: string;
           }) => (
             <ProductCard
               name={product.name}
               price={product.price}
               image={product.image}
               imageHover={product.imageHover}
+              link={product.link}
             />
           )
         )}

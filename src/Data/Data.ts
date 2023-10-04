@@ -24,6 +24,7 @@ const productData = {
     imageHover: card1hover,
     name: "Жакет з вовни / Бежевий",
     price: "Price 1",
+    link: "/goods/9",
   },
   product2: {
     collectionName: "Одяг",
@@ -31,13 +32,15 @@ const productData = {
     imageHover: card2hover,
     name: "Корсет з кісточками / Темно - зелений",
     price: "Price 2",
+    link: "/goods/19",
   },
   product3: {
     collectionName: "Одяг",
     image: card3,
     imageHover: card3hover,
-    name: "Пальто чорне",
+    name: "Пальто прямого крою  Сіре",
     price: "Price 3",
+    link: "/goods/2",
   },
   product4: {
     collectionName: "FW 2023 Drop Fall",
@@ -45,6 +48,7 @@ const productData = {
     imageHover: card4hover,
     name: "Костюм на шнурівці / Синій",
     price: "Price 4",
+    link: "/goods/17",
   },
   product5: {
     collectionName: "FW 2023 Drop Fall",
@@ -52,6 +56,7 @@ const productData = {
     imageHover: card5hover,
     name: "Брюки палаццо бежевий з вовни",
     price: "Price 5",
+    link: "/goods/5",
   },
   product6: {
     collectionName: "FW 2023 Drop Fall",
@@ -59,6 +64,7 @@ const productData = {
     imageHover: card6hover,
     name: "Кроп-жакет / Темно-зелений",
     price: "Price 6",
+    link: "/goods/13",
   },
   product7: {
     collectionName: "FW 2023 Drop Fall",
@@ -66,6 +72,7 @@ const productData = {
     imageHover: card7hover,
     name: "Кюлоти з завищеною талією / Cині",
     price: "Price 7",
+    link: "/goods/6",
   },
   product8: {
     collectionName: "FW 2023 Drop Fall",
@@ -73,6 +80,7 @@ const productData = {
     imageHover: card8hover,
     name: "Бомбер",
     price: "Price 8",
+    link: "/goods/3",
   },
   product9: {
     collectionName: "FW 2023 Drop Fall",
@@ -80,6 +88,7 @@ const productData = {
     imageHover: card9hover,
     name: "Костюм / Чорний",
     price: "Price 9",
+    link: "/goods/20",
   },
 };
 

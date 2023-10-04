@@ -22,7 +22,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         <AiOutlineClose />
       </button>
       <div className="p-4">
-        <p className="font-roboto text-xl pt-2">Корзина</p>
+        <p className="font-roboto text-xl pt-2">Кошик</p>
       </div>
     </div>
   );
