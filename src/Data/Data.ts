@@ -88,7 +88,7 @@ const productData = {
     imageHover: card9hover,
     name: "Костюм / Чорний",
     price: "Price 9",
-    link: "/goods/20",
+    link: "/goods/18",
   },
 };
 
