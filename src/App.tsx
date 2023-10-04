@@ -6,6 +6,8 @@ import Contacts from "./Pages/Contacts";
 import Catalog from "./Pages/Catalog";
 import VideoPreloader from "./Components/VideoPreloader";
 import Collections from "./Pages/Collections";
+import Goods from "./Pages/Goods";
+import Good from "./Pages/Good";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/contacts" element={<About />} />
           <Route path="/customers" element={<Contacts />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/goods" element={<Goods />} />
+          <Route path="/good" element={<Good />} />
         </Routes>
       </BrowserRouter>
     </>

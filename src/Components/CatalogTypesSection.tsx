@@ -7,7 +7,7 @@ const CatalogTypesSection = () => {
   return (
     <div className="flex mt-[80px] justify-between flex-col md:flex-row gap-5">
       <div className="md:w-[50%] w-full overflow-hidden">
-        <Link to="">
+        <Link to="/goods">
           <img
             src={catalogtype1}
             alt="Костюми"
@@ -16,7 +16,7 @@ const CatalogTypesSection = () => {
         </Link>
       </div>
       <div className="md:w-[50%] w-full overflow-hidden">
-        <Link to="">
+        <Link to="/goods">
           <img
             src={catalogtype2}
             alt="Корсети"
