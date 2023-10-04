@@ -1,13 +1,24 @@
 import React from "react";
 import { IoIosResize } from "react-icons/io";
+
+import { SlArrowDown } from "react-icons/sl";
 import greencol from "../Assets/greencol.png";
 import good1_1 from "../Assets/good1_1.png";
 import good1_2 from "../Assets/good1_2.png";
 import good1_3 from "../Assets/good1_3.png";
 import good1_4 from "../Assets/good1_4.png";
 import good1_5 from "../Assets/good1_5.png";
-
+import ProductCard from "./ProductCard";
+import productData from "../Data/Data";
+interface Product {
+  name: string;
+  price: string;
+  image: string;
+  imageHover: string;
+}
 const GoodLayout = () => {
+  const product: Product = productData.product1;
+
   return (
     <>
       <div className="flex justify-between container mx-auto">
@@ -17,19 +28,19 @@ const GoodLayout = () => {
           </p>
         </div>
       </div>
-      <div className="flex container mx-auto gap-5">
+      <div className="flex container mx-auto gap-5 flex-col lg:flex-row">
         <div className="flex flex-col">
-          <div className="flex items-center">
+          <div className="flex items-center flex-col lg:flex-row">
             <img src={good1_1} alt="Спідниця міді з асемитричним розрізом" />
             <img src={good1_2} alt="Спідниця міді з асемитричним розрізом" />
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center flex-col lg:flex-row">
             <img src={good1_3} alt="Спідниця міді з асемитричним розрізом" />
             <img src={good1_4} alt="Спідниця міді з асемитричним розрізом" />
             <img src={good1_5} alt="Спідниця міді з асемитричним розрізом" />
           </div>
         </div>
-        <div className="max-w-[500px]">
+        <div className="max-w-[500px] p-5 lg:p-0">
           <h1 className="font-roboto font-bold text-[24px]">
             Спідниця міді з асиметричним розрізом \ Темно - зелена
           </h1>
@@ -83,6 +94,53 @@ const GoodLayout = () => {
           <p className="roboto text-[16px] text-[#7B7B7B] pt-[10px]">
             Відправлення 2 робочих дня
           </p>
+        </div>
+      </div>
+      <div className="mt-[40px] container mx-auto p-5 lg:p-0">
+        <div className="container mx-auto flex justify-between">
+          <h2 className="roboto text-[20px] font-bold uppercase">
+            Деталі товару
+          </h2>
+          <button>
+            <SlArrowDown className="text-[24px]" />
+          </button>
+        </div>
+        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        <div className="container mx-auto flex justify-between">
+          <h2 className="roboto text-[20px] font-bold uppercase">
+            Склад виробу
+          </h2>
+          <button>
+            <SlArrowDown className="text-[24px]" />
+          </button>
+        </div>
+        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        <div className="container mx-auto flex justify-between">
+          <h2 className="roboto text-[20px] font-bold uppercase">
+            Склад НИТОК ДЛЯ ВИШИВКИ
+          </h2>
+          <button>
+            <SlArrowDown className="text-[24px]" />
+          </button>
+        </div>
+        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        <div className="container mx-auto flex justify-between">
+          <h2 className="roboto text-[20px] font-bold uppercase">ПІДКЛАД</h2>
+          <button>
+            <SlArrowDown className="text-[24px]" />
+          </button>
+        </div>
+        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+      </div>
+      <div className="container mx-auto lg:pb-[100px] p-5 lg:p-0">
+        <h2 className="text-[20px] roboto">Вас може зацікавити</h2>
+        <div className="max-w-[500px]">
+          <ProductCard
+            name={product.name}
+            price={product.price}
+            image={product.image}
+            imageHover={product.imageHover}
+          />
         </div>
       </div>
     </>
