@@ -8,12 +8,12 @@ const HeroSection = () => {
   return (
     <>
       <div className="banner fixed left-0 right-0 mx-auto top-[25vh] z-[999] hidden md:block">
-        <a href="https://instagram.com/diieva_ua">
+        <a href="https://www.instagram.com/diieva.brand/">
           <img src={banner} alt="" className="mx-auto" />
         </a>
       </div>
       <div className="banner fixed left-0 right-0 mx-auto top-[25vh] z-[999] md:hidden">
-        <a href="https://instagram.com/diieva_ua">
+        <a href="https://www.instagram.com/diieva.brand/">
           <img src={bannermob} alt="" className="mx-auto" />
         </a>
       </div>

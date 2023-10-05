@@ -60,7 +60,7 @@ const Home = () => {
         link1="/goods/17"
         image1hover={card4hover}
         name1="Костюм на шнурівці / Синій "
-        price1="Price"
+        price1="13 000 ₴"
         image2={card5}
         image2hover={card5hover}
         name2="Брюки палаццо бежевий з вовни"
@@ -78,7 +78,7 @@ const Home = () => {
         image1hover={card7hover}
         link1="/goods/6"
         name1="Кюлоти  з завищеною талією \ Cині "
-        price1="Price"
+        price1="4300 ₴"
         image2={card8}
         image2hover={card8hover}
         name2="Бомбер"
