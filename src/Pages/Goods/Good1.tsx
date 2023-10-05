@@ -22,7 +22,7 @@ const Good1 = () => {
         image3={good1_3}
         image4={good1_4}
         image5={good1_5}
-        price="PRICE"
+        price="4000"
         path="DIIEVA / Каталог / Спідниці / Спідниця міді з асемитричним розрізом"
       />
       <Footer />

@@ -44,7 +44,7 @@ const productData = {
     image: product1,
     imageHover: product1,
     name: "Жакет на шнурівці / Синій ",
-    price: "8700 ₴",
+    price: "8 700 ₴",
     link: "/goods/8",
   },
   product2: {
@@ -60,7 +60,7 @@ const productData = {
     image: product3,
     imageHover: product3,
     name: "Жакет з вовни / Бежевий",
-    price: "9550 ₴",
+    price: "9 550 ₴",
     link: "/goods/9",
   },
   product4: {
@@ -92,7 +92,7 @@ const productData = {
     image: product7,
     imageHover: product7,
     name: "Кюлоти  з завищеною талією / Cині",
-    price: "4300 ₴",
+    price: "4 300 ₴",
     link: "/goods/6",
   },
   product8: {
@@ -132,7 +132,7 @@ const productData = {
     image: product12,
     imageHover: product12,
     name: "Спідниця міді з асиметричним розрізом / Темно - зелена ",
-    price: "4000 ₴",
+    price: "4 000 ₴",
     link: "/goods/1",
   },
   product13: {
@@ -140,7 +140,7 @@ const productData = {
     image: product13,
     imageHover: product13,
     name: "Корсет з кісточками / Молочний ",
-    price: "4300 ₴",
+    price: "4 300 ₴",
     link: "/goods/20",
   },
   product14: {
@@ -148,7 +148,7 @@ const productData = {
     image: product14,
     imageHover: product14,
     name: "Корсет з кісточками / Темно - зелений ",
-    price: "4300 ₴",
+    price: "4 300 ₴",
     link: "/goods/19",
   },
   product15: {

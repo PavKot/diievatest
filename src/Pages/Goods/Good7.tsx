@@ -21,7 +21,7 @@ const Good7 = () => {
         image3={good7_3}
         image4={good7_4}
         image5={good7_5}
-        price="PRICE"
+        price="3 600"
         path="DIIEVA /
         Каталог /
         Костюми /

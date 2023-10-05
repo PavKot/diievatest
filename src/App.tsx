@@ -27,6 +27,7 @@ import Good17 from "./Pages/Goods/Good17";
 import Good18 from "./Pages/Goods/Good18";
 import Good19 from "./Pages/Goods/Good19";
 import Good20 from "./Pages/Goods/Good20";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/contacts" element={<About />} />
           <Route path="/customers" element={<Contacts />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/goods" element={<Goods />} />
           <Route path="/good" element={<Good />} />
           <Route path="/goods/1" element={<Good1 />} />
@@ -53,7 +55,6 @@ function App() {
           <Route path="/goods/11" element={<Good11 />} />
           <Route path="/goods/12" element={<Good12 />} />
           <Route path="/goods/13" element={<Good13 />} />
-
           <Route path="/goods/15" element={<Good15 />} />
           <Route path="/goods/16" element={<Good16 />} />
           <Route path="/goods/17" element={<Good17 />} />

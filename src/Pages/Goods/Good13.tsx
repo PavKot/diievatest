@@ -21,7 +21,7 @@ const Good13 = () => {
         image3={good13_3}
         image4={good13_4}
         image5={good13_5}
-        price="PRICE"
+        price="7 900"
         path="DIIEVA /
         Каталог /
         Жакети /

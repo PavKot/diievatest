@@ -21,7 +21,7 @@ const Good6 = () => {
         image3={good6_3}
         image4={good6_4}
         image5={good6_5}
-        price="PRICE"
+        price="4300"
         path="DIIEVA /
         Каталог /
         Брюки /

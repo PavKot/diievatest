@@ -21,7 +21,7 @@ const Good19 = () => {
         image3={good19_3}
         image4={good19_4}
         image5={good19_5}
-        price="PRICE"
+        price="4 300"
         path="DIIEVA /
         Каталог /
         Корсети /

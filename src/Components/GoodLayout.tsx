@@ -40,7 +40,9 @@ const GoodLayout: React.FC<Props> = ({
   path,
 }: Props) => {
   const product: Product = productData.product1;
-
+  const randomProductIndex = Math.floor(Math.random() * 19) + 1;
+  const randomProduct: Product =
+    productData[`product${randomProductIndex}` as keyof typeof productData];
   return (
     <>
       <div className="flex justify-between container mx-auto">
@@ -156,11 +158,11 @@ const GoodLayout: React.FC<Props> = ({
         <h2 className="text-[20px] roboto">Вас може зацікавити</h2>
         <div className="max-w-[500px]">
           <ProductCard
-            name={product.name}
-            price={product.price}
-            image={product.image}
-            imageHover={product.imageHover}
-            link={product.link}
+            name={randomProduct.name}
+            price={randomProduct.price}
+            image={randomProduct.image}
+            imageHover={randomProduct.imageHover}
+            link={randomProduct.link}
           />
         </div>
       </div>

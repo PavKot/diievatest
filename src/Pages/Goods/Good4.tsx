@@ -21,7 +21,7 @@ const Good4 = () => {
         image3={good4_3}
         image4={good4_4}
         image5={good4_5}
-        price="PRICE"
+        price="5 350"
         path="DIIEVA /
         Каталог /
         Верхній одяг / 

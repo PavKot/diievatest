@@ -31,6 +31,10 @@ const Links: Link[] = [
     name: "Контакти",
     url: "/contacts",
   },
+  {
+    name: "Про нас",
+    url: "/about",
+  },
 ];
 
 const NavBarTest = () => {

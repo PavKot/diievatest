@@ -1,4 +1,5 @@
 import React from "react";
+import paymentmethods from "../Assets/paymentmethods.png";
 
 const Footer = () => {
   return (
@@ -73,12 +74,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="line mt-[100px] bg-[#BFBFBF] h-[1px] w-100% items-center"></div>
-      <div className="flex justify-between container mx-auto py-[20px] text-center md:text-unset">
+      <div className="flex justify-between container mx-auto py-[20px] text-center md:text-unset items-center flex-col lg:flex-row">
         <p className="uppercase text-[14px] text-white">2023 - Diieva Brand</p>
         <p className="uppercase text-[14px] text-white">Усі права захищено</p>
-        <h4 className="md:text-[20px] text-white uppercase text-[14px]">
-          Методи оплати
-        </h4>
+        <img src={paymentmethods} alt="" className="" />
       </div>
     </footer>
   );
