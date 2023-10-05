@@ -18,34 +18,54 @@ function VideoPreloader() {
   }, []);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: 9999,
-        background: "#000",
-        display: videoLoaded ? "none" : "block",
-      }}
-    >
-      <video
-        id="preload-video"
-        autoPlay={true}
-        loop={true}
-        muted={true}
-        playsInline={true}
+    <>
+      <div
+        className="video-preloader"
         style={{
-          objectFit: "cover",
+          position: "fixed",
+          top: 0,
+          left: 0,
           width: "100%",
           height: "100%",
+          zIndex: 9999,
+          background: "#fff",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          display: videoLoaded ? "none" : "block",
         }}
       >
-        <source src={preloader} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+        <video
+          id="preload-video"
+          autoPlay={true}
+          loop={true}
+          muted={true}
+          playsInline={true}
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <source src={preloader} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div
+        className="video-preloader-bg"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 9998,
+          background: "#fff",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          display: videoLoaded ? "none" : "block",
+        }}
+      ></div>
+    </>
   );
 }
 

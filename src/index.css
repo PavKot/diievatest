@@ -52,3 +52,17 @@ body {
   background: #555;
   transition: 0.3s ease-in-out;
 }
+
+.video-preloader-bg {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .video-preloader {
+    height: 30% !important;
+    margin-top: 70%;
+  }
+  .video-preloader-bg {
+    display: block;
+  }
+}
