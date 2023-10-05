@@ -57,6 +57,12 @@ body {
   display: none;
 }
 
+video {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
 @media screen and (max-width: 768px) {
   .video-preloader {
     height: 30% !important;
