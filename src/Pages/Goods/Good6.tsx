@@ -7,11 +7,13 @@ import good6_2 from "../../Assets/good6_2.png";
 import good6_3 from "../../Assets/good6_3.png";
 import good6_4 from "../../Assets/good6_4.png";
 import good6_5 from "../../Assets/good6_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good6 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Кюлоти  з завищеною талією \ Cині "
         image1={good6_1}

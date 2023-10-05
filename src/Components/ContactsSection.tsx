@@ -6,39 +6,50 @@ const ContactsSection = () => {
   return (
     <section className="flex justify-between flex-col md:flex-row">
       <div className="max-w-[500px] container mx-auto">
-        <h1 className="text-[20px] pt-[30px]">Інформація</h1>
+        <h1 className="text-[20px] pt-[30px]">Покупцеві</h1>
         <p className="pt-[16px]">
-          Якщо є пошиття по індивідуальним параметрам, строки очікування,
+          Ми прагнемо аби наша співпраця була ефективною та приємною. Тому,
+          перед вами правила щодо гарантії, повернення та обміну товару. У вас є
+          питання — у нас є відповідь!
         </p>
         <h1 className="text-[20px] pt-[30px]">Умови доставки</h1>
         <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          Гарантійний термін на товар 90 календарних днів з моменту придбання та
+          пожиттєва гарантія на ручну вишивку. У випадку виявлення технологічних
+          дефектів товарів, які не залежать від покупця, ми їх безкоштовно
+          усуваємо.
         </p>
-        <h1 className="text-[20px] pt-[30px]">Оплата</h1>
+        <h1 className="text-[20px] pt-[30px]">Повернення та обмін</h1>
         <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          Повернення товару може бути здійснено протягом 14 календарних днів
+          згідно із законодавством України за умови, якщо товар зберіг свій
+          товарний вигляд – сліди вжитку відсутні, етикетки та ярлики не
+          пошкоджені. Усі витрати, пов'язані з поверненням/обміном товару
+          належної якості, несе покупець.Після перевірки товару на відповідність
+          умовам повернення, його повну вартість буде відшкодовано протягом 3-5
+          робочих днів. * термін зарахування коштів на розрахунковий рахунок
+          отримувача залежить від внутрішнього регламенту банка - отримувача.
         </p>
-        <h1 className="text-[20px] pt-[30px]">Повернення</h1>
+        <h1 className="text-[20px] pt-[30px]">
+          Інструкція щодо повернення товару
+        </h1>
         <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          1. Перед відправленням, будь ласка, заповніть форму повернення , що
+          знаходиться в коробці з товаром або зверніться до менеджера з обробки
+          інтернет - замовлень.
+          <br />
+          2. Надішліть менеджеру заповнену електрону форму повернення або
+          фотографію.
+          <br />
+          3. Коли менеджер підтвердить повернення разом з товаром, покладіть у
+          коробку форму повернення
+          <br />
+          4. Надішліть товар за адресою, яка вказана в формі повернення.  Товар
+          придбаний за послугою "Корегування розміру за індивідуальними
+          параметрами" не підлягає поверненню. Якщо виріб після примірки не
+          підходить по розміру – товар підлягає доопрацюванню. Усі витрати
+          покриваються, включно з витратами перевізника. Для подальшої
+          інформації зверніться до менеджера.
         </p>
       </div>
       <div className="w-[50%] mx-auto pt-4 md:mx-0 md:pt-0">

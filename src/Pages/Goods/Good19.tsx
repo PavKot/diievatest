@@ -7,11 +7,13 @@ import good19_2 from "../../Assets/good19_2.png";
 import good19_3 from "../../Assets/good19_3.png";
 import good19_4 from "../../Assets/good19_4.png";
 import good19_5 from "../../Assets/good19_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good19 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Корсет з кісточками \ Темно - зелений"
         image1={good19_1}

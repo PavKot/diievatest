@@ -7,11 +7,13 @@ import good5_2 from "../../Assets/good5_2.png";
 import good5_3 from "../../Assets/good5_3.png";
 import good5_4 from "../../Assets/good5_4.png";
 import good5_5 from "../../Assets/good5_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good5 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Брюки палаццо з вовни \ Бежеві "
         image1={good5_1}

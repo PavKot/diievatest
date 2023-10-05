@@ -6,11 +6,13 @@ import good3_1 from "../../Assets/good3_1.png";
 import good3_2 from "../../Assets/good3_2.png";
 import good3_3 from "../../Assets/good3_3.png";
 import good3_4 from "../../Assets/good3_4.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good3 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Бомбер вовняний"
         image1={good3_1}

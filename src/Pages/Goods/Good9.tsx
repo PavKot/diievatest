@@ -7,11 +7,13 @@ import good9_2 from "../../Assets/good9_2.png";
 import good9_3 from "../../Assets/good9_3.png";
 import good9_4 from "../../Assets/good9_4.png";
 import good9_5 from "../../Assets/good9_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good9 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Жакет з вовни \ Бежевий "
         image1={good9_1}

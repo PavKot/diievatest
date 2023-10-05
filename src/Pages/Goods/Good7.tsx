@@ -7,11 +7,13 @@ import good7_2 from "../../Assets/good7_2.png";
 import good7_3 from "../../Assets/good7_3.png";
 import good7_4 from "../../Assets/good7_4.png";
 import good7_5 from "../../Assets/good7_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good7 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Брюки завужені \ Чорні "
         image1={good7_1}

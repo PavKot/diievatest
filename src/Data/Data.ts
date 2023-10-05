@@ -16,79 +16,180 @@ import card8 from "../Assets/card8.png";
 import card8hover from "../Assets/card8hover.png";
 import card9 from "../Assets/card9.png";
 import card9hover from "../Assets/card9hover.png";
+import card10 from "../Assets/card10.png";
+import card10hover from "../Assets/card10hover.png";
+import product1 from "../Assets/product1.png";
+import product2 from "../Assets/product2.png";
+import product3 from "../Assets/product3.png";
+import product4 from "../Assets/product4.png";
+import product5 from "../Assets/product5.png";
+import product6 from "../Assets/product6.png";
+import product7 from "../Assets/product7.png";
+import product8 from "../Assets/product8.png";
+import product9 from "../Assets/product9.png";
+import product10 from "../Assets/product10.png";
+import product11 from "../Assets/product11.png";
+import product12 from "../Assets/product12.png";
+import product13 from "../Assets/product13.png";
+import product14 from "../Assets/product14.png";
+import product15 from "../Assets/product15.png";
+import product16 from "../Assets/product16.png";
+import product17 from "../Assets/product17.png";
+import product18 from "../Assets/product18.png";
+import product19 from "../Assets/product19.png";
 
 const productData = {
   product1: {
     collectionName: "Одяг",
-    image: card1,
-    imageHover: card1hover,
-    name: "Жакет з вовни / Бежевий",
+    image: product1,
+    imageHover: product1,
+    name: "Жакет на шнурівці / Синій ",
     price: "Price 1",
-    link: "/goods/9",
+    link: "/goods/8",
   },
   product2: {
     collectionName: "Одяг",
-    image: card2,
-    imageHover: card2hover,
-    name: "Корсет з кісточками / Темно - зелений",
-    price: "Price 2",
-    link: "/goods/19",
+    image: product2,
+    imageHover: product2,
+    name: "Кроп-жакет асиметричний / Темно-зелений",
+    price: "7 900 ₴",
+    link: "/goods/13",
   },
   product3: {
     collectionName: "Одяг",
-    image: card3,
-    imageHover: card3hover,
-    name: "Пальто прямого крою  Сіре",
-    price: "Price 3",
-    link: "/goods/2",
+    image: product3,
+    imageHover: product3,
+    name: "Жакет з вовни / Бежевий",
+    price: "9550 ₴",
+    link: "/goods/9",
   },
   product4: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card4,
-    imageHover: card4hover,
-    name: "Костюм на шнурівці / Синій",
+    collectionName: "Одяг",
+    image: product4,
+    imageHover: product4,
+    name: "Жакет з вовни / Темно - синій",
     price: "Price 4",
-    link: "/goods/17",
+    link: "/goods/10",
   },
   product5: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card5,
-    imageHover: card5hover,
-    name: "Брюки палаццо бежевий з вовни",
+    collectionName: "Одяг",
+    image: product5,
+    imageHover: product5,
+    name: "Брюки палаццо з вовни / Сині",
     price: "Price 5",
-    link: "/goods/5",
+    link: "/goods/4",
   },
   product6: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card6,
-    imageHover: card6hover,
-    name: "Кроп-жакет / Темно-зелений",
-    price: "Price 6",
-    link: "/goods/13",
+    collectionName: "Одяг",
+    image: product6,
+    imageHover: product6,
+    name: "Брюки палаццо з вовни / Бежеві ",
+    price: "5 350 ₴",
+    link: "/goods/5",
   },
   product7: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card7,
-    imageHover: card7hover,
-    name: "Кюлоти з завищеною талією / Cині",
+    collectionName: "Одяг",
+    image: product7,
+    imageHover: product7,
+    name: "Кюлоти  з завищеною талією / Cині",
     price: "Price 7",
     link: "/goods/6",
   },
   product8: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card8,
-    imageHover: card8hover,
-    name: "Бомбер",
-    price: "Price 8",
-    link: "/goods/3",
+    collectionName: "Одяг",
+    image: product8,
+    imageHover: product8,
+    name: "Костюм з вовни / Бежевий",
+    price: "14 900 ₴",
+    link: "/goods/12",
   },
   product9: {
-    collectionName: "FW 2023 Drop Fall",
-    image: card9,
-    imageHover: card9hover,
-    name: "Костюм / Чорний",
+    collectionName: "Одяг",
+    image: product9,
+    imageHover: product9,
+    name: "Костюм з вовни / Темно- синій ",
     price: "Price 9",
+    link: "/goods/15",
+  },
+  product10: {
+    collectionName: "Одяг",
+    image: product10,
+    imageHover: product10,
+    name: "Костюм з кроп-жакетом / темно-зелений",
+    price: "11 900 ₴",
+    link: "/goods/16",
+  },
+  product11: {
+    collectionName: "Одяг",
+    image: product11,
+    imageHover: product11,
+    name: "Костюм на шнурівці / Синій ",
+    price: "Price 11",
+    link: "/goods/17",
+  },
+  product12: {
+    collectionName: "Одяг",
+    image: product12,
+    imageHover: product12,
+    name: "Спідниця міді з асиметричним розрізом / Темно - зелена ",
+    price: "4000 ₴",
+    link: "/goods/1",
+  },
+  product13: {
+    collectionName: "Одяг",
+    image: product13,
+    imageHover: product13,
+    name: "Корсет з кісточками / Молочний ",
+    price: "4300 ₴",
+    link: "/goods/20",
+  },
+  product14: {
+    collectionName: "Одяг",
+    image: product14,
+    imageHover: product14,
+    name: "Корсет з кісточками / Темно - зелений ",
+    price: "4300 ₴",
+    link: "/goods/19",
+  },
+  product15: {
+    collectionName: "Одяг",
+    image: product15,
+    imageHover: product15,
+    name: "Жакет двобортний / Чорний ",
+    price: "7 900 ₴",
+    link: "/goods/11",
+  },
+  product16: {
+    collectionName: "Одяг",
+    image: product16,
+    imageHover: product16,
+    name: "Костюм з Жакетом двобортним / Чорний",
+    price: "11 500 ₴",
     link: "/goods/18",
+  },
+  product17: {
+    collectionName: "Одяг",
+    image: product17,
+    imageHover: product17,
+    name: "Бомбер вовняний / Синій",
+    price: "12 900 ₴",
+    link: "/goods/3",
+  },
+  product18: {
+    collectionName: "Одяг",
+    image: product18,
+    imageHover: product18,
+    name: "Брюки завужені / Чорні",
+    price: "3 600 ₴",
+    link: "/goods/7",
+  },
+  product19: {
+    collectionName: "Одяг",
+    image: product19,
+    imageHover: product19,
+    name: "Пальто прямого крою / Сіре",
+    price: "11 900 ₴",
+    link: "/goods/2",
   },
 };
 

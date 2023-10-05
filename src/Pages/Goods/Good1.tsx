@@ -7,11 +7,13 @@ import good1_2 from "../../Assets/good1_2.png";
 import good1_3 from "../../Assets/good1_3.png";
 import good1_4 from "../../Assets/good1_4.png";
 import good1_5 from "../../Assets/good1_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good1 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Спідниця міді з асиметричним розрізом \
         Темно - зелена "

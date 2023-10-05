@@ -39,56 +39,56 @@ const Home = () => {
         image1={card1}
         image1hover={card1hover}
         name1="Жакет з вовни / Бежевий"
-        link1="/good1"
-        price1="Price"
+        link1="/goods/9"
+        price1="9 500 ₴"
         image2={card2}
         image2hover={card2hover}
         name2="Корсет з кісточками \ Темно - зелений "
-        link2="/good2"
-        price2="Price"
+        link2="/goods/19"
+        price2="4 300 ₴"
         image3={card3}
-        link3="/good3"
+        link3="/goods/2"
         image3hover={card3hover}
-        name3="Пальто чорне"
-        price3="Price"
+        name3="Пальто прямого крою"
+        price3="11 900 ₴"
       />
 
       <FramesSection />
       <HomeCollectionSection
         collectionName="FW 2023 Drop Fall"
         image1={card4}
-        link1="/good1"
+        link1="/goods/17"
         image1hover={card4hover}
         name1="Костюм на шнурівці / Синій "
         price1="Price"
         image2={card5}
         image2hover={card5hover}
         name2="Брюки палаццо бежевий з вовни"
-        price2="Price"
-        link2="/good2"
+        price2="5 350 ₴"
+        link2="/goods/5"
         image3={card6}
         image3hover={card6hover}
         name3="Кроп-жакет \ Темно-зелений"
-        price3="Price"
-        link3="/good3"
+        price3="7 900 ₴"
+        link3="/goods/13"
       />
       <HomeCollectionSection
         collectionName="FW 2023 Drop Fall"
         image1={card7}
         image1hover={card7hover}
-        link1="/good1"
+        link1="/goods/6"
         name1="Кюлоти  з завищеною талією \ Cині "
         price1="Price"
         image2={card8}
         image2hover={card8hover}
         name2="Бомбер"
-        link2="/good2"
-        price2="Price"
+        link2="/goods/3"
+        price2="12 900 ₴"
         image3={card9}
         image3hover={card9hover}
         name3="Костюм / Чорний"
-        price3="Price"
-        link3="/good3"
+        price3="11 500 ₴"
+        link3="/goods/18"
       />
       <ThreeFramesSection />
       <SmallFramesSection />

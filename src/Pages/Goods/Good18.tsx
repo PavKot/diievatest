@@ -7,11 +7,13 @@ import good18_2 from "../../Assets/good18_2.png";
 import good18_3 from "../../Assets/good18_3.png";
 import good18_4 from "../../Assets/good18_4.png";
 import good18_5 from "../../Assets/good18_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good18 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Костюм з Жакетом двобортним \ Чорний  "
         image1={good18_1}

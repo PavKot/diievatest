@@ -7,11 +7,13 @@ import good20_2 from "../../Assets/good20_2.png";
 import good20_3 from "../../Assets/good20_3.png";
 import good20_4 from "../../Assets/good20_4.png";
 import good20_5 from "../../Assets/good20_5.png";
+import ScrollToTop from "../../Components/ScrollToTop";
 
 const Good20 = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <GoodLayout
         name="Корсет з кісточками \ Молочний "
         image1={good20_1}
