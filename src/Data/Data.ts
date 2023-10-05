@@ -92,7 +92,7 @@ const productData = {
     image: product7,
     imageHover: product7,
     name: "Кюлоти  з завищеною талією / Cині",
-    price: "Price 7",
+    price: "4300 ₴",
     link: "/goods/6",
   },
   product8: {
