@@ -44,7 +44,7 @@ const productData = {
     image: product1,
     imageHover: product1,
     name: "Жакет на шнурівці / Синій ",
-    price: "Price 1",
+    price: "8700 ₴",
     link: "/goods/8",
   },
   product2: {
@@ -68,7 +68,7 @@ const productData = {
     image: product4,
     imageHover: product4,
     name: "Жакет з вовни / Темно - синій",
-    price: "Price 4",
+    price: "9 550 ₴",
     link: "/goods/10",
   },
   product5: {
@@ -76,7 +76,7 @@ const productData = {
     image: product5,
     imageHover: product5,
     name: "Брюки палаццо з вовни / Сині",
-    price: "Price 5",
+    price: "5 350 ₴",
     link: "/goods/4",
   },
   product6: {
@@ -108,7 +108,7 @@ const productData = {
     image: product9,
     imageHover: product9,
     name: "Костюм з вовни / Темно- синій ",
-    price: "Price 9",
+    price: "14 900 ₴",
     link: "/goods/15",
   },
   product10: {
@@ -124,7 +124,7 @@ const productData = {
     image: product11,
     imageHover: product11,
     name: "Костюм на шнурівці / Синій ",
-    price: "Price 11",
+    price: "13 000 ₴",
     link: "/goods/17",
   },
   product12: {
