@@ -63,7 +63,7 @@ const NavBarTest = () => {
                 <>
                   <li
                     key={link.name}
-                    className="text-black font-epilogue md:text-[13px] text-[24px] lg:ml-[30px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] md:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
+                    className="text-black font-epilogue md:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] md:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
                   >
                     <a href={link.url}>{link.name}</a>
                   </li>
@@ -71,17 +71,17 @@ const NavBarTest = () => {
                 </>
               ))}
             </ul>
-            <div className="font-bold text-2xl cursor-pointer flex items-center font-epilogue text-white font-normal md:w-[400px] justify-center w-100 p-5">
+            <div className="font-bold text-2xl cursor-pointer flex items-center font-epilogue text-white font-normal md:w-[300px] justify-center w-100 p-5">
               <a href="/">
                 <img src={logo} alt="logo" />
               </a>
             </div>
             <div className="flex gap-[36px] justify-end w-[400px]">
               <button>
-                <CiSearch fontSize={24} />
+                <CiSearch fontSize={20} />
               </button>
               <button className="hidden md:block">
-                <GrLanguage fontSize={24} />
+                <GrLanguage fontSize={20} />
               </button>
               <button
                 className="block md:hidden"
@@ -96,7 +96,7 @@ const NavBarTest = () => {
                 )}
               </button>
               <button onClick={toggleCart}>
-                <BsCart fontSize={24} />
+                <BsCart fontSize={20} />
               </button>
             </div>
           </div>
