@@ -8,6 +8,8 @@ import { GrLanguage } from "react-icons/gr";
 import { BsCart } from "react-icons/bs";
 import { VscMenu } from "react-icons/vsc";
 import Cart from "./Cart";
+import GlobalSearch from "./Popups/GlobalSearch";
+import productData from "../Data/Data";
 
 interface Link {
   name: string;
@@ -40,15 +42,27 @@ const Links: Link[] = [
 const NavBarTest = () => {
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const toggleCart = () => {
     setIsOpen(!isOpen);
     console.log("opened");
   };
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
   return (
     <>
       <Cart toggleCart={toggleCart} isOpen={isOpen} />
-
+      {isSearchOpen && (
+        <GlobalSearch
+          productData={productData}
+          isSearchOpen={isSearchOpen}
+          toggleSearch={toggleSearch}
+        />
+      )}
       <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[20px] sticky bg-blur lg:p-0 p-[18px] lg:py-2">
         <div className="lg:px-10 2xl:px-0 container mx-auto">
           <div className="flex items-center justify-between">
@@ -77,7 +91,7 @@ const NavBarTest = () => {
               </a>
             </div>
             <div className="flex gap-[36px] justify-end w-[400px]">
-              <button>
+              <button onClick={toggleSearch}>
                 <CiSearch fontSize={20} />
               </button>
               <button className="hidden lg:block">
