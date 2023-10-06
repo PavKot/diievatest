@@ -1,7 +1,9 @@
 import React from "react";
 import { IoIosResize } from "react-icons/io";
+import { useState } from "react";
 
 import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp } from "react-icons/sl";
 import greencol from "../Assets/greencol.png";
 import good1_1 from "../Assets/good1_1.png";
 import good1_2 from "../Assets/good1_2.png";
@@ -41,8 +43,35 @@ const GoodLayout: React.FC<Props> = ({
 }: Props) => {
   const product: Product = productData.product1;
   const randomProductIndex = Math.floor(Math.random() * 19) + 1;
+  const randomProductIndex2 = Math.floor(Math.random() * 19) + 1;
+  const randomProductIndex3 = Math.floor(Math.random() * 19) + 1;
   const randomProduct: Product =
     productData[`product${randomProductIndex}` as keyof typeof productData];
+  const randomProduct2: Product =
+    productData[`product${randomProductIndex2}` as keyof typeof productData];
+  const randomProduct3: Product =
+    productData[`product${randomProductIndex3}` as keyof typeof productData];
+  const [accordion1Open, setAccordion1Open] = useState(false);
+  const [accordion2Open, setAccordion2Open] = useState(false);
+  const [accordion3Open, setAccordion3Open] = useState(false);
+  const [accordion4Open, setAccordion4Open] = useState(false);
+
+  const toggleAccordion1 = () => {
+    setAccordion1Open(!accordion1Open);
+  };
+
+  const toggleAccordion2 = () => {
+    setAccordion2Open(!accordion2Open);
+  };
+
+  const toggleAccordion3 = () => {
+    setAccordion3Open(!accordion3Open);
+  };
+
+  const toggleAccordion4 = () => {
+    setAccordion4Open(!accordion4Open);
+  };
+
   return (
     <>
       <div className="flex justify-between container mx-auto">
@@ -123,46 +152,112 @@ const GoodLayout: React.FC<Props> = ({
           <h2 className="roboto text-[20px] font-bold uppercase">
             Деталі товару
           </h2>
-          <button>
-            <SlArrowDown className="text-[24px]" />
+          <button onClick={toggleAccordion1}>
+            {accordion1Open ? (
+              <SlArrowUp className="text-[24px]" />
+            ) : (
+              <SlArrowDown className="text-[24px]" />
+            )}
           </button>
         </div>
         <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        {accordion1Open && (
+          <div>
+            <p className="font-bold font-roboto text-[16px]">Спідниця</p>
+            <p className="font-roboto text-[16px] max-w-[850px] pt-2 pb-2">
+              Спідниця міді довжини кольору темно - зелений. Модель має боковий
+              асиметричний розріз який доповнює традиційна українська вишивка,
+              технікою Полтавським змережуванням в тон основної тканини. Тканина
+              м'яка і пластична з додаванням вовни , шви оброблені контрастною
+              червоною косою - бейкою . Виріб має пояс та фіксується потаємною
+              блискавкою з боку.
+            </p>
+          </div>
+        )}
         <div className="container mx-auto flex justify-between">
           <h2 className="roboto text-[20px] font-bold uppercase">
             Склад виробу
           </h2>
-          <button>
-            <SlArrowDown className="text-[24px]" />
+          <button onClick={toggleAccordion2}>
+            {accordion2Open ? (
+              <SlArrowUp className="text-[24px]" />
+            ) : (
+              <SlArrowDown className="text-[24px]" />
+            )}
           </button>
         </div>
         <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        {accordion2Open && (
+          <div>
+            <p className="font-bold font-roboto text-[16px] pb-2">
+              70% поліестер
+            </p>
+            <p className="font-bold font-roboto text-[16px] py-2">
+              20% віскоза
+            </p>
+            <p className="font-bold font-roboto text-[16px] py-2">10% вовна</p>
+          </div>
+        )}
         <div className="container mx-auto flex justify-between">
           <h2 className="roboto text-[20px] font-bold uppercase">
             Склад НИТОК ДЛЯ ВИШИВКИ
           </h2>
-          <button>
-            <SlArrowDown className="text-[24px]" />
+          <button onClick={toggleAccordion3}>
+            {accordion3Open ? (
+              <SlArrowUp className="text-[24px]" />
+            ) : (
+              <SlArrowDown className="text-[24px]" />
+            )}
           </button>
         </div>
         <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        {accordion3Open && (
+          <div>
+            <p className="font-bold font-roboto text-[16px] pb-2">100% льон</p>
+          </div>
+        )}
         <div className="container mx-auto flex justify-between">
           <h2 className="roboto text-[20px] font-bold uppercase">ПІДКЛАД</h2>
-          <button>
-            <SlArrowDown className="text-[24px]" />
+          <button onClick={toggleAccordion4}>
+            {accordion4Open ? (
+              <SlArrowUp className="text-[24px]" />
+            ) : (
+              <SlArrowDown className="text-[24px]" />
+            )}
           </button>
         </div>
         <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+        {accordion4Open && (
+          <div>
+            <p className="font-bold font-roboto text-[16px] pb-2">
+              100% віскоза
+            </p>
+          </div>
+        )}
       </div>
-      <div className="container mx-auto lg:pb-[100px] p-5 lg:p-0">
+      <div className="container mx-auto lg:pb-[100px] p-5 lg:p-0 lg:pt-10">
         <h2 className="text-[20px] roboto">Вас може зацікавити</h2>
-        <div className="max-w-[500px]">
+        <div className="flex flex-col lg:flex-row justify-between pt-2">
           <ProductCard
             name={randomProduct.name}
             price={randomProduct.price}
             image={randomProduct.image}
             imageHover={randomProduct.imageHover}
             link={randomProduct.link}
+          />
+          <ProductCard
+            name={randomProduct2.name}
+            price={randomProduct2.price}
+            image={randomProduct2.image}
+            imageHover={randomProduct2.imageHover}
+            link={randomProduct2.link}
+          />
+          <ProductCard
+            name={randomProduct3.name}
+            price={randomProduct3.price}
+            image={randomProduct3.image}
+            imageHover={randomProduct3.imageHover}
+            link={randomProduct3.link}
           />
         </div>
       </div>
