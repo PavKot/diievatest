@@ -1,42 +1,31 @@
 import React from "react";
 import aboutSectionImg from "../Assets/aboutSectionImg.png";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
 
 const AboutSection = () => {
   return (
-    <section className="flex justify-between flex-col md:flex-row">
-      <div className="max-w-[500px] container mx-auto">
-        <h1 className="text-[20px]">Про нас</h1>
-        <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
-        <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
-        <p className="pt-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
+    <section className="">
+      <div className="container mx-auto p-5 lg:p-0">
+        <p className="text-[16px] font-roboto">Клієнтська підтримка</p>
+        <h1 className="text-[32px] font-bold font-roboto pt-[40px]">
+          + 38073 219 79 16
+        </h1>
+
+        <div className="flex max-w-[300px] justify-between pt-[70px] items-center">
+          <p>Для зв’язку у соціальних мережах</p>
+          <div className="flex">
+            <a href="#">
+              <AiOutlineInstagram className="text-[30px] ml-[10px]" />
+            </a>
+
+            <a href="#">
+              <FaFacebookF className="text-[30px] ml-[10px]" />
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="w-[50%] mx-auto pt-4 md:mx-0 md:pt-0">
-        <img src={aboutSectionImg} alt="" className="w-[100%]" />
-      </div>
+      <img src={aboutSectionImg} alt="" className="w-[100%] pt-[70px]" />
     </section>
   );
 };

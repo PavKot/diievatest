@@ -64,10 +64,12 @@ const Footer = () => {
             <h4 className="uppercase font-[20px] text-white">КОНТАКТИ</h4>
             <ul className="md:pt-[50px] pt-[20px] text-white">
               <li>
-                <a href="#">+ 380 000 00 00</a>
+                <a href="#" className="uppercase">
+                  Customer support
+                </a>
               </li>
               <li className="pt-[16px]">
-                <a href="#">(email)</a>
+                <a href="#">+ 38073 219 79 16</a>
               </li>
             </ul>
           </div>

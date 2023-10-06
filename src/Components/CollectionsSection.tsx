@@ -7,7 +7,7 @@ const CollectionsSection = () => {
     <div className="flex justify-between container mx-auto pb-[200px] flex-col md:flex-row">
       <div>
         <h4 className="font-roboto text-[16px] font-bold">
-          Winter - Fall 23 DIIEVA collection
+          FW’23/24 INCODE: roots matter
         </h4>
       </div>
       <div>

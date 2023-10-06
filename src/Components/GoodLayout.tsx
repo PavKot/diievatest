@@ -12,6 +12,7 @@ import good1_4 from "../Assets/good1_4.png";
 import good1_5 from "../Assets/good1_5.png";
 import ProductCard from "./ProductCard";
 import productData from "../Data/Data";
+import SizePopup from "./Popups/SizePopup";
 interface Product {
   name: string;
   price: string;
@@ -55,6 +56,8 @@ const GoodLayout: React.FC<Props> = ({
   const [accordion2Open, setAccordion2Open] = useState(false);
   const [accordion3Open, setAccordion3Open] = useState(false);
   const [accordion4Open, setAccordion4Open] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("XS");
+  const [sizePopupOpen, setSizePopupOpen] = useState(false);
 
   const toggleAccordion1 = () => {
     setAccordion1Open(!accordion1Open);
@@ -72,8 +75,16 @@ const GoodLayout: React.FC<Props> = ({
     setAccordion4Open(!accordion4Open);
   };
 
+  const handleSizeClick = (size: string) => {
+    setSelectedSize(size);
+  };
+
   return (
     <>
+      <SizePopup
+        sizePopupOpen={sizePopupOpen}
+        setSizePopupOpen={setSizePopupOpen}
+      />
       <div className="flex justify-between container mx-auto">
         <div>
           <p className="text-[#7B7B7B] font-roboto text-[14px]">{path}</p>
@@ -99,21 +110,43 @@ const GoodLayout: React.FC<Props> = ({
             {price} UAH
           </h1>
           <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px]"></div>
-          <p className="text-[#7B7B7B] font-roboto text-[14px] flex items-center gap-3 pt-[30px]">
-            <IoIosResize className="text-[24px]" />
-            Розмірна сітка
-          </p>
+          <button onClick={() => setSizePopupOpen(!sizePopupOpen)}>
+            <p className="text-[#7B7B7B] font-roboto text-[14px] flex items-center gap-3 pt-[30px]">
+              <IoIosResize className="text-[24px]" />
+              Розмірна сітка
+            </p>
+          </button>
           <div className="flex gap-5 mt-[15px]">
-            <button className="border-2 px-[20px] py-[5px] border-black font-bold">
+            <button
+              className={`border-2 px-[20px] py-[5px] border-black font-bold ${
+                selectedSize === "XS" ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleSizeClick("XS")}
+            >
               XS
             </button>
-            <button className="border-2 px-[20px] py-[5px] border-black font-bold">
+            <button
+              className={`border-2 px-[20px] py-[5px] border-black font-bold ${
+                selectedSize === "S" ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleSizeClick("S")}
+            >
               S
             </button>
-            <button className="border-2 px-[20px] py-[5px] border-black font-bold">
+            <button
+              className={`border-2 px-[20px] py-[5px] border-black font-bold ${
+                selectedSize === "M" ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleSizeClick("M")}
+            >
               M
             </button>
-            <button className="border-2 px-[20px] py-[5px] border-black font-bold">
+            <button
+              className={`border-2 px-[20px] py-[5px] border-black font-bold ${
+                selectedSize === "L" ? "bg-black text-white" : ""
+              }`}
+              onClick={() => handleSizeClick("L")}
+            >
               L
             </button>
           </div>

@@ -49,11 +49,11 @@ const NavBarTest = () => {
     <>
       <Cart toggleCart={toggleCart} isOpen={isOpen} />
 
-      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[20px] sticky bg-blur md:p-0 p-[18px] md:py-2">
+      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[20px] sticky bg-blur lg:p-0 p-[18px] lg:py-2">
         <div className="lg:px-10 2xl:px-0 container mx-auto">
           <div className="flex items-center justify-between">
             <ul
-              className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[999] left-0 w-full md:w-auto md:pl-0 pl-0 w-[400px] ${
+              className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[999] left-0 w-full lg:w-auto md:pl-0 pl-0 w-[400px] ${
                 open
                   ? "top-[6rem] right-0 bg-darkGreen w-full h-screen flex pt-[6rem] flex-col bg-blur2"
                   : "top-[-490px] right-[-120px]"
@@ -63,7 +63,7 @@ const NavBarTest = () => {
                 <>
                   <li
                     key={link.name}
-                    className="text-black font-epilogue md:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] md:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
+                    className="text-black font-epilogue lg:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] lg:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
                   >
                     <a href={link.url}>{link.name}</a>
                   </li>
@@ -80,11 +80,11 @@ const NavBarTest = () => {
               <button>
                 <CiSearch fontSize={20} />
               </button>
-              <button className="hidden md:block">
+              <button className="hidden lg:block">
                 <GrLanguage fontSize={20} />
               </button>
               <button
-                className="block md:hidden"
+                className="block lg:hidden"
                 onClick={() => {
                   setOpen(!open);
                 }}
