@@ -63,7 +63,7 @@ const NavBarTest = () => {
                 <>
                   <li
                     key={link.name}
-                    className="text-black font-epilogue md:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] md:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
+                    className="text-black font-epilogue md:text-[13px] text-[24px] lg:ml-[30px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] md:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
                   >
                     <a href={link.url}>{link.name}</a>
                   </li>
