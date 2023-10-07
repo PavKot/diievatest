@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assets/logo.png";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { GrLanguage } from "react-icons/gr";
 import { BsCart } from "react-icons/bs";
@@ -10,6 +9,8 @@ import { VscMenu } from "react-icons/vsc";
 import Cart from "./Cart";
 import GlobalSearch from "./Popups/GlobalSearch";
 import productData from "../Data/Data";
+import { BiChevronDown } from "react-icons/bi";
+import NavHover from "./NavHover";
 
 interface Link {
   name: string;
@@ -53,6 +54,22 @@ const NavBarTest = () => {
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
   };
+
+  // State to track if the "Каталог" or "Покупцеві" elements are being hovered
+  const [isCatalogOrCustomersHovered, setIsCatalogOrCustomersHovered] =
+    useState(false);
+
+  const handleCatalogOrCustomersMouseEnter = () => {
+    setIsCatalogOrCustomersHovered(true);
+  };
+
+  const handleCatalogOrCustomersMouseLeave = () => {
+    /* set timeout to allow the user to hover over the nav hover element */
+    setTimeout(() => {
+      setIsCatalogOrCustomersHovered(false);
+    }, 1500);
+  };
+
   return (
     <>
       <Cart toggleCart={toggleCart} isOpen={isOpen} />
@@ -73,16 +90,21 @@ const NavBarTest = () => {
                   : "top-[-490px] right-[-120px]"
               }`}
             >
-              {Object.values(Links).map((link) => (
-                <>
-                  <li
-                    key={link.name}
-                    className="text-black font-epilogue lg:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] lg:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
-                  >
-                    <a href={link.url}>{link.name}</a>
-                  </li>
-                  <div className="line h-[1px] bg-gray"></div>
-                </>
+              {Links.map((link) => (
+                /* check if the link is "Каталог" or "Покупцеві" and add the event handlers accordingly */
+                <li
+                  key={link.name}
+                  className="text-black font-epilogue lg:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] lg:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
+                  onMouseEnter={handleCatalogOrCustomersMouseEnter}
+                  onMouseLeave={handleCatalogOrCustomersMouseLeave}
+                >
+                  <a href={link.url} className="flex items-center gap-2">
+                    {link.name}{" "}
+                    {(link.name === "Каталог" || link.name === "Покупцеві") && (
+                      <BiChevronDown fontSize={20} />
+                    )}
+                  </a>
+                </li>
               ))}
             </ul>
             <div className="font-bold text-2xl cursor-pointer flex items-center font-epilogue text-white font-normal md:w-[300px] justify-center w-100 p-5">
@@ -114,16 +136,9 @@ const NavBarTest = () => {
               </button>
             </div>
           </div>
-          <div
-            className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden text-black hidden"
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            {open ? <AiOutlineClose /> : <HiMenuAlt2 />}
-          </div>
         </div>
       </div>
+      <NavHover show={isCatalogOrCustomersHovered} />
     </>
   );
 };

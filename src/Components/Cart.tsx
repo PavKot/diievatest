@@ -23,6 +23,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
       : 0;
     setTotalPrice(total);
   }, []);
+
   return (
     <>
       <ToastContainer
@@ -37,6 +38,11 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         pauseOnHover
         theme="light"
       />
+      <div
+        className={`fixed top-0 left-0 z-[999] w-full h-full ${
+          isOpen ? "bg-black opacity-60" : "hidden"
+        }`}
+      ></div>
       <div
         className={`fixed top-0 right-0 z-[1000] h-screen w-72 bg-white shadow-md transition-transform duration-300 ease-in-out ${
           isOpen
@@ -72,7 +78,9 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
                         setCart(newCart);
                         localStorage.setItem("cart", JSON.stringify(newCart));
                       }}
-                    ></button>
+                    >
+                      Remove
+                    </button>
                   </div>
                 </div>
               </div>
