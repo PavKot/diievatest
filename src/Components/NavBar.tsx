@@ -91,18 +91,26 @@ const NavBarTest = () => {
               }`}
             >
               {Links.map((link) => (
-                /* check if the link is "Каталог" or "Покупцеві" and add the event handlers accordingly */
                 <li
                   key={link.name}
                   className="text-black font-epilogue lg:text-[16px] text-[24px] lg:ml-[40px] first:ml-0 mt-0 md:mt-[20px] pl-[3rem] lg:pl-0 pt-[24px] md:pt-0 pb-[24px] md:pb-0"
-                  onMouseEnter={handleCatalogOrCustomersMouseEnter}
-                  onMouseLeave={handleCatalogOrCustomersMouseLeave}
+                  onMouseEnter={
+                    link.name === "Каталог" || link.name === "Покупцеві"
+                      ? handleCatalogOrCustomersMouseEnter
+                      : undefined
+                  }
+                  onMouseLeave={
+                    link.name === "Каталог" || link.name === "Покупцеві"
+                      ? handleCatalogOrCustomersMouseLeave
+                      : undefined
+                  }
                 >
                   <a href={link.url} className="flex items-center gap-2">
-                    {link.name}{" "}
+                    {link.name}
+                    {/*
                     {(link.name === "Каталог" || link.name === "Покупцеві") && (
                       <BiChevronDown fontSize={20} />
-                    )}
+                    )}*/}
                   </a>
                 </li>
               ))}
