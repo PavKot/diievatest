@@ -8,8 +8,13 @@ import good7_3 from "../../Assets/good7_3.png";
 import good7_4 from "../../Assets/good7_4.png";
 import good7_5 from "../../Assets/good7_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
 
-const Good7 = () => {
+const Good7: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -21,11 +26,14 @@ const Good7 = () => {
         image3={good7_3}
         image4={good7_4}
         image5={good7_5}
-        price="3 600"
+        price="3600"
         path="DIIEVA /
         Каталог /
         Костюми /
         Брюки завужені Чорні"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

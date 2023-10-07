@@ -9,7 +9,13 @@ import good20_4 from "../../Assets/good20_4.png";
 import good20_5 from "../../Assets/good20_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 
-const Good20 = () => {
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
+
+const Good20: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -21,11 +27,14 @@ const Good20 = () => {
         image3={good20_3}
         image4={good20_4}
         image5={good20_5}
-        price="4 300"
+        price="4300"
         path="DIIEVA /
         Каталог /
         Корсети /
         Корсет з кісточками Молочний"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

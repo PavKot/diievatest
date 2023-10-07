@@ -13,6 +13,9 @@ import good1_5 from "../Assets/good1_5.png";
 import ProductCard from "./ProductCard";
 import productData from "../Data/Data";
 import SizePopup from "./Popups/SizePopup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 interface Product {
   name: string;
   price: string;
@@ -30,17 +33,20 @@ interface Props {
   image4: string;
   image5: string;
   path: string;
+  addToCart: (item: any) => void;
+  setCart?: (cart: any) => void;
+  cart?: any;
 }
 const GoodLayout: React.FC<Props> = ({
   name,
   price,
-
   image1,
   image2,
   image3,
   image4,
   image5,
   path,
+  addToCart,
 }: Props) => {
   const product: Product = productData.product1;
   const randomProductIndex = Math.floor(Math.random() * 19) + 1;
@@ -81,6 +87,18 @@ const GoodLayout: React.FC<Props> = ({
 
   return (
     <>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <SizePopup
         sizePopupOpen={sizePopupOpen}
         setSizePopupOpen={setSizePopupOpen}
@@ -172,7 +190,25 @@ const GoodLayout: React.FC<Props> = ({
             </div>
             <p className="roboto text-[16px] text-[#7B7B7B]">Є в наявності</p>
           </div>
-          <button className="mt-[4px] w-full px-[20px] py-[15px] bg-[#333333] text-white mt-[32px]">
+          <button
+            onClick={() => {
+              addToCart({
+                name,
+                price,
+                image1,
+                image2,
+                image3,
+                image4,
+                selectedSize,
+              });
+              toast.success("Товар додано до кошика");
+
+              setTimeout(() => {
+                window.location.reload();
+              }, 2000);
+            }}
+            className="mt-[4px] w-full px-[20px] py-[15px] bg-[#333333] text-white mt-[32px]"
+          >
             В кошик
           </button>
           <p className="roboto text-[16px] text-[#7B7B7B] pt-[10px]">

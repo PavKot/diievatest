@@ -9,7 +9,13 @@ import good8_4 from "../../Assets/good8_4.png";
 import good8_5 from "../../Assets/good8_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 
-const Good8 = () => {
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
+
+const Good8: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -21,11 +27,14 @@ const Good8 = () => {
         image3={good8_3}
         image4={good8_4}
         image5={good8_5}
-        price="8 700"
+        price="8700"
         path="DIIEVA /
         Каталог /
         Жакети /
         Жакет на шнурівці Синій"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

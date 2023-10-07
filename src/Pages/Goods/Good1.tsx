@@ -9,7 +9,13 @@ import good1_4 from "../../Assets/good1_4.png";
 import good1_5 from "../../Assets/good1_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 
-const Good1 = () => {
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
+
+const Good1: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -24,6 +30,9 @@ const Good1 = () => {
         image5={good1_5}
         price="4000"
         path="DIIEVA / Каталог / Спідниці / Спідниця міді з асемитричним розрізом"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

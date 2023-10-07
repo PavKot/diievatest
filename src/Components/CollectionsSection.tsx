@@ -13,8 +13,10 @@ const CollectionsSection = () => {
       <div>
         <img src={collection1} alt="Winter - Fall 23 DIIEVA collection" />
       </div>
-      <div className="max-w-[400px] pl-[20px] md:pl-0">
-        <h4 className="font-roboto text-[20px] font-bold">FW 2023 Drop Fall</h4>
+      <div className="2xl:max-w-[600px] max-w-[300px] pl-[20px] md:pl-0">
+        <h4 className="font-roboto text-[20px] font-bold">
+          FW’23/24 INCODE: roots matter
+        </h4>
         <p className="pt-[80px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

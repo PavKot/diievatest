@@ -9,7 +9,13 @@ import good6_4 from "../../Assets/good6_4.png";
 import good6_5 from "../../Assets/good6_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 
-const Good6 = () => {
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
+
+const Good6: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -26,6 +32,9 @@ const Good6 = () => {
         Каталог /
         Брюки /
         Кюлоти з завищеною талією Сині"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

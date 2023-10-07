@@ -9,7 +9,13 @@ import good18_4 from "../../Assets/good18_4.png";
 import good18_5 from "../../Assets/good18_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 
-const Good18 = () => {
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
+
+const Good18: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -21,11 +27,14 @@ const Good18 = () => {
         image3={good18_3}
         image4={good18_4}
         image5={good18_5}
-        price="11 500"
+        price="11500"
         path="DIIEVA /
         Каталог /
         Костюми /
         Костюм з Жакетом двобортним Чорним"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacts from "./Pages/Contacts";
 import Catalog from "./Pages/Catalog";
@@ -29,7 +30,27 @@ import Good19 from "./Pages/Goods/Good19";
 import Good20 from "./Pages/Goods/Good20";
 import AboutUs from "./Pages/AboutUs";
 
+interface Product {
+  name: string;
+  price: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  image4: string;
+  image5: string;
+}
+
 function App() {
+  const [cart, setCart] = useState<Product[]>(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+  const addToCart = (product: Product) => {
+    const updatedCart = [...cart, product];
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    console.log(updatedCart);
+  };
   return (
     <>
       <BrowserRouter>
@@ -42,25 +63,120 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/goods" element={<Goods />} />
           <Route path="/good" element={<Good />} />
-          <Route path="/goods/1" element={<Good1 />} />
-          <Route path="/goods/2" element={<Good2 />} />
-          <Route path="/goods/3" element={<Good3 />} />
-          <Route path="/goods/4" element={<Good4 />} />
-          <Route path="/goods/5" element={<Good5 />} />
-          <Route path="/goods/6" element={<Good6 />} />
-          <Route path="/goods/7" element={<Good7 />} />
-          <Route path="/goods/8" element={<Good8 />} />
-          <Route path="/goods/9" element={<Good9 />} />
-          <Route path="/goods/10" element={<Good10 />} />
-          <Route path="/goods/11" element={<Good11 />} />
-          <Route path="/goods/12" element={<Good12 />} />
-          <Route path="/goods/13" element={<Good13 />} />
-          <Route path="/goods/15" element={<Good15 />} />
-          <Route path="/goods/16" element={<Good16 />} />
-          <Route path="/goods/17" element={<Good17 />} />
-          <Route path="/goods/18" element={<Good18 />} />
-          <Route path="/goods/19" element={<Good19 />} />
-          <Route path="/goods/20" element={<Good20 />} />
+          <Route
+            path="/goods/1"
+            element={
+              <Good1 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/2"
+            element={
+              <Good2 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/3"
+            element={
+              <Good3 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/4"
+            element={
+              <Good4 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/5"
+            element={
+              <Good5 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/6"
+            element={
+              <Good6 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/7"
+            element={
+              <Good7 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/8"
+            element={
+              <Good8 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/9"
+            element={
+              <Good9 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/10"
+            element={
+              <Good10 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/11"
+            element={
+              <Good11 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/12"
+            element={
+              <Good12 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/13"
+            element={
+              <Good13 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/15"
+            element={
+              <Good15 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/16"
+            element={
+              <Good16 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/17"
+            element={
+              <Good17 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/18"
+            element={
+              <Good18 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/19"
+            element={
+              <Good19 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/20"
+            element={
+              <Good20 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

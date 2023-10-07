@@ -8,8 +8,13 @@ import good5_3 from "../../Assets/good5_3.png";
 import good5_4 from "../../Assets/good5_4.png";
 import good5_5 from "../../Assets/good5_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
 
-const Good5 = () => {
+const Good5: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -21,11 +26,14 @@ const Good5 = () => {
         image3={good5_3}
         image4={good5_4}
         image5={good5_5}
-        price="5 350"
+        price="5350"
         path="DIIEVA /
         Каталог /
         Брюки /
         Брюки палаццо з вовни Бежеві"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>

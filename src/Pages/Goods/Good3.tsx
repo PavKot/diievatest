@@ -7,8 +7,13 @@ import good3_2 from "../../Assets/good3_2.png";
 import good3_3 from "../../Assets/good3_3.png";
 import good3_4 from "../../Assets/good3_4.png";
 import ScrollToTop from "../../Components/ScrollToTop";
+interface Props {
+  cart: any;
+  setCart: (cart: any) => void;
+  addToCart: (item: any) => void;
+}
 
-const Good3 = () => {
+const Good3: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -20,11 +25,14 @@ const Good3 = () => {
         image3={good3_3}
         image4={good3_4}
         image5="none"
-        price="12 900"
+        price="12900"
         path="DIIEVA /
         Каталог /
         Верхній одяг / 
         Бомбер"
+        addToCart={addToCart}
+        setCart={setCart}
+        cart={cart}
       />
       <Footer />
     </>
