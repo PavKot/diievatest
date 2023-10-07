@@ -104,7 +104,7 @@ const GoodLayout: React.FC<Props> = ({
         setSizePopupOpen={setSizePopupOpen}
       />
       <div className="flex justify-between container mx-auto">
-        <div>
+        <div className="p-5 lg:p-0">
           <p className="text-[#7B7B7B] font-roboto text-[14px]">{path}</p>
         </div>
       </div>

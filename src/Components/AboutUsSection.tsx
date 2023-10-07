@@ -7,7 +7,7 @@ const AboutUsSection = () => {
   return (
     <>
       <div className="container mx-auto">
-        <h1 className="roboto text-[20px] pt-[100px]">Про нас</h1>
+        <h1 className="roboto text-[20px] pt-[100px] lg:p-0 p-5">Про нас</h1>
       </div>
       <img src={about1} alt="" className="w-[100%] pt-[50px]" />
       <div>
@@ -19,7 +19,7 @@ const AboutUsSection = () => {
             <div className="line w-[50px] h-[2px] ml-[24px] bg-[#373737]"></div>
           </div>
           <div className="max-w-[550px]">
-            <p className="roboto text-[14px]">
+            <p className="roboto text-[14px] lg:p-0 p-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -39,7 +39,7 @@ const AboutUsSection = () => {
             <div className="line w-[50px] h-[2px] ml-[24px] bg-[#373737]"></div>
           </div>
           <div className="max-w-[550px]">
-            <p className="roboto text-[14px]">
+            <p className="roboto text-[14px] lg:p-0 p-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

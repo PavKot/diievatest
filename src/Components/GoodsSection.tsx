@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 const GoodsSection = () => {
   return (
     <>
-      <div className="flex justify-between container mx-auto">
+      <div className="flex justify-between container mx-auto lg:p-0 p-5">
         <div>
           <p className="text-[#7B7B7B] font-roboto text-[14px]">
             DIIEVA / Каталог / Все{" "}
@@ -19,7 +19,7 @@ const GoodsSection = () => {
           </button>
         </div>
       </div>
-      <div className="container md:grid grid-cols-3 mx-auto gap-10 pb-[100px] flex flex-col">
+      <div className="container md:grid grid-cols-3 mx-auto gap-10 pb-[100px] flex flex-col lg:p-0 p-5">
         {Object.values(productData).map(
           (product: {
             collectionName: string;
