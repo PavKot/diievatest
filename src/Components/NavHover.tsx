@@ -18,7 +18,7 @@ const NavHover: React.FC<NavHoverProps> = ({ show }) => {
 
   return (
     <div
-      className={`backdrop-blur-5.6 w-full z-[999] mx-auto pt-[20px] sticky top-[126px] bg-blur lg:p-0 p-[18px] lg:py-0 lg:pb-5 ${
+      className={`backdrop-blur-5.6 w-full z-[999] mx-auto pt-[20px] fixed top-[126px] bg-blur lg:p-0 p-[18px] lg:py-0 lg:pb-5 ${
         show || isHovering ? "hidden md:block" : "hidden"
       }`}
       onMouseEnter={handleMouseEnter}

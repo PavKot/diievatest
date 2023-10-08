@@ -70,7 +70,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
                     </p>
                     <p className="font-roboto text-lg">{item.price}</p>
 
-                    <button
+                    {/*   <button
                       onClick={() => {
                         const newCart = cart.filter(
                           (cartItem: any) => cartItem.id !== item.id
@@ -80,7 +80,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
                       }}
                     >
                       Remove
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
