@@ -1,3 +1,4 @@
+import { type } from "os";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -7,6 +8,7 @@ interface Props {
   image: string;
   imageHover: string;
   link: string;
+  type: string;
 }
 
 const ProductCard: React.FC<Props> = ({
@@ -15,6 +17,7 @@ const ProductCard: React.FC<Props> = ({
   image,
   imageHover,
   link,
+  type,
 }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 

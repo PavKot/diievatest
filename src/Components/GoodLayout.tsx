@@ -22,6 +22,7 @@ interface Product {
   image: string;
   imageHover: string;
   link: string;
+  type: string;
 }
 
 interface Props {
@@ -313,6 +314,7 @@ const GoodLayout: React.FC<Props> = ({
             image={randomProduct.image}
             imageHover={randomProduct.imageHover}
             link={randomProduct.link}
+            type={randomProduct.type}
           />
           <ProductCard
             name={randomProduct2.name}
@@ -320,6 +322,7 @@ const GoodLayout: React.FC<Props> = ({
             image={randomProduct2.image}
             imageHover={randomProduct2.imageHover}
             link={randomProduct2.link}
+            type={randomProduct2.type}
           />
           <ProductCard
             name={randomProduct3.name}
@@ -327,6 +330,7 @@ const GoodLayout: React.FC<Props> = ({
             image={randomProduct3.image}
             imageHover={randomProduct3.imageHover}
             link={randomProduct3.link}
+            type={randomProduct3.type}
           />
         </div>
       </div>
