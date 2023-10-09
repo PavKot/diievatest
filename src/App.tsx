@@ -51,6 +51,7 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     console.log(updatedCart);
   };
+
   return (
     <>
       <BrowserRouter>

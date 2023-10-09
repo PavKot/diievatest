@@ -1,7 +1,6 @@
 import React from "react";
 import { IoIosResize } from "react-icons/io";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
 import greencol from "../Assets/greencol.png";
@@ -15,6 +14,7 @@ import productData from "../Data/Data";
 import SizePopup from "./Popups/SizePopup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Cart from "./Cart";
 
 interface Product {
   name: string;
@@ -37,6 +37,9 @@ interface Props {
   addToCart: (item: any) => void;
   setCart?: (cart: any) => void;
   cart?: any;
+  toggleCart?: () => void;
+  colorImg?: string;
+  colorName?: string;
 }
 const GoodLayout: React.FC<Props> = ({
   name,
@@ -47,6 +50,8 @@ const GoodLayout: React.FC<Props> = ({
   image4,
   image5,
   path,
+  colorImg,
+  colorName,
   addToCart,
 }: Props) => {
   const product: Product = productData.product1;
@@ -65,6 +70,13 @@ const GoodLayout: React.FC<Props> = ({
   const [accordion4Open, setAccordion4Open] = useState(false);
   const [selectedSize, setSelectedSize] = useState("XS");
   const [sizePopupOpen, setSizePopupOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsOpen(!isOpen);
+    console.log("opened");
+  };
 
   const toggleAccordion1 = () => {
     setAccordion1Open(!accordion1Open);
@@ -88,6 +100,7 @@ const GoodLayout: React.FC<Props> = ({
 
   return (
     <>
+      <Cart isOpen={isOpen} toggleCart={toggleCart} />
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
@@ -185,9 +198,9 @@ const GoodLayout: React.FC<Props> = ({
             <p className="font-bold roboto text-[16px]">Колір</p>
             <div className="flex items-start flex-col justify-center">
               <button className="mt-[4px] border-2 px-[5px] py-[5px] border-black">
-                <img src={greencol} alt="Зелений" />
+                <img src={colorImg} alt={colorName} />
               </button>
-              <p className=" roboto text-[14px] text-[#7B7B7B]">Зелений</p>
+              <p className=" roboto text-[14px] text-[#7B7B7B]">{colorName}</p>
             </div>
             <p className="roboto text-[16px] text-[#7B7B7B]">Є в наявності</p>
           </div>
@@ -203,10 +216,12 @@ const GoodLayout: React.FC<Props> = ({
                 selectedSize,
               });
               toast.success("Товар додано до кошика");
-
+              toggleCart();
+              /*
               setTimeout(() => {
                 window.location.reload();
               }, 2000);
+              */
             }}
             className="mt-[4px] w-full px-[20px] py-[15px] bg-[#333333] text-white mt-[32px]"
           >

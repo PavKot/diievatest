@@ -7,6 +7,7 @@ import good2_2 from "../../Assets/good2_2.png";
 import good2_3 from "../../Assets/good2_3.png";
 import good2_4 from "../../Assets/good2_4.png";
 import ScrollToTop from "../../Components/ScrollToTop";
+import grey from "../../Assets/grey.png";
 
 interface Props {
   cart: any;
@@ -34,6 +35,8 @@ const Good2: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         addToCart={addToCart}
         setCart={setCart}
         cart={cart}
+        colorImg={grey}
+        colorName="Сірий"
       />
       <Footer />
     </>
