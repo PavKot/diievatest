@@ -36,6 +36,13 @@ const Good3: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={black}
         colorName="Чорний"
+        details1Name="Бомбер вовняний"
+        details1Desc="Бомбер виготовлений з вовняної тканини  та має утеплювач Slimtex який забезпечить тепло і комфорт.  Виріб має зручні закриті основною тканиною  резинки на подолі , манжетах та горловині.  Модель має бокові кишені . Дизайн виробу прикрашає ручна червона вишивка. Застібаєтся з спереду на блискавку та вшиті магніти."
+        details2First="40 % вовна"
+        details2Second="40 % акрил"
+        details2Third="20 % віскоза"
+        details3First="none"
+        details4First="100% віскоза"
       />
       <Footer />
     </>

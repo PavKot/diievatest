@@ -15,6 +15,7 @@ import SizePopup from "./Popups/SizePopup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./Cart";
+import RequestPopup from "./Popups/RequestPopup";
 
 interface Product {
   name: string;
@@ -40,6 +41,13 @@ interface Props {
   toggleCart?: () => void;
   colorImg?: string;
   colorName?: string;
+  details1Name?: string;
+  details1Desc?: string;
+  details2First?: string;
+  details2Second?: string;
+  details2Third?: string;
+  details3First?: string;
+  details4First?: string;
 }
 const GoodLayout: React.FC<Props> = ({
   name,
@@ -53,6 +61,13 @@ const GoodLayout: React.FC<Props> = ({
   colorImg,
   colorName,
   addToCart,
+  details1Name,
+  details1Desc,
+  details2First,
+  details2Second,
+  details2Third,
+  details3First,
+  details4First,
 }: Props) => {
   const product: Product = productData.product1;
   const randomProductIndex = Math.floor(Math.random() * 19) + 1;
@@ -70,6 +85,7 @@ const GoodLayout: React.FC<Props> = ({
   const [accordion4Open, setAccordion4Open] = useState(false);
   const [selectedSize, setSelectedSize] = useState("XS");
   const [sizePopupOpen, setSizePopupOpen] = useState(false);
+  const [requestPopupOpen, setRequestPopupOpen] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -116,6 +132,10 @@ const GoodLayout: React.FC<Props> = ({
       <SizePopup
         sizePopupOpen={sizePopupOpen}
         setSizePopupOpen={setSizePopupOpen}
+      />
+      <RequestPopup
+        requestPopupOpen={requestPopupOpen}
+        setRequestPopupOpen={setRequestPopupOpen}
       />
       <div className="flex justify-between container mx-auto">
         <div className="p-5 lg:p-0">
@@ -190,7 +210,12 @@ const GoodLayout: React.FC<Props> = ({
               *Відбувається після попереднього замовлення. Виготовлення 5 - 10
               робочих днів
             </p>
-            <button className="mt-[4px] w-full border-2 px-[20px] py-[10px] border-black">
+            <button
+              onClick={() => {
+                setRequestPopupOpen(true);
+              }}
+              className="mt-[4px] w-full border-2 px-[20px] py-[10px] border-black"
+            >
               Зробити запит
             </button>
           </div>
@@ -248,14 +273,9 @@ const GoodLayout: React.FC<Props> = ({
         <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
         {accordion1Open && (
           <div>
-            <p className="font-bold font-roboto text-[16px]">Спідниця</p>
+            <p className="font-bold font-roboto text-[16px]">{details1Name}</p>
             <p className="font-roboto text-[16px] max-w-[850px] pt-2 pb-2">
-              Спідниця міді довжини кольору темно - зелений. Модель має боковий
-              асиметричний розріз який доповнює традиційна українська вишивка,
-              технікою Полтавським змережуванням в тон основної тканини. Тканина
-              м'яка і пластична з додаванням вовни , шви оброблені контрастною
-              червоною косою - бейкою . Виріб має пояс та фіксується потаємною
-              блискавкою з боку.
+              {details1Desc}
             </p>
           </div>
         )}
@@ -275,49 +295,64 @@ const GoodLayout: React.FC<Props> = ({
         {accordion2Open && (
           <div>
             <p className="font-bold font-roboto text-[16px] pb-2">
-              70% поліестер
+              {details2First}
             </p>
             <p className="font-bold font-roboto text-[16px] py-2">
-              20% віскоза
+              {details2Second}
             </p>
-            <p className="font-bold font-roboto text-[16px] py-2">10% вовна</p>
-          </div>
-        )}
-        <div className="container mx-auto flex justify-between">
-          <h2 className="roboto text-[20px] font-bold uppercase">
-            Склад НИТОК ДЛЯ ВИШИВКИ
-          </h2>
-          <button onClick={toggleAccordion3}>
-            {accordion3Open ? (
-              <SlArrowUp className="text-[24px]" />
-            ) : (
-              <SlArrowDown className="text-[24px]" />
-            )}
-          </button>
-        </div>
-        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
-        {accordion3Open && (
-          <div>
-            <p className="font-bold font-roboto text-[16px] pb-2">100% льон</p>
-          </div>
-        )}
-        <div className="container mx-auto flex justify-between">
-          <h2 className="roboto text-[20px] font-bold uppercase">ПІДКЛАД</h2>
-          <button onClick={toggleAccordion4}>
-            {accordion4Open ? (
-              <SlArrowUp className="text-[24px]" />
-            ) : (
-              <SlArrowDown className="text-[24px]" />
-            )}
-          </button>
-        </div>
-        <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
-        {accordion4Open && (
-          <div>
-            <p className="font-bold font-roboto text-[16px] pb-2">
-              100% віскоза
+            <p className="font-bold font-roboto text-[16px] py-2">
+              {details2Third}
             </p>
           </div>
+        )}
+
+        {details3First != "none" && (
+          <>
+            <div className="container mx-auto flex justify-between">
+              <h2 className="roboto text-[20px] font-bold uppercase">
+                Склад НИТОК ДЛЯ ВИШИВКИ
+              </h2>
+              <button onClick={toggleAccordion3}>
+                {accordion3Open ? (
+                  <SlArrowUp className="text-[24px]" />
+                ) : (
+                  <SlArrowDown className="text-[24px]" />
+                )}
+              </button>
+            </div>
+            <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+            {accordion3Open && (
+              <div>
+                <p className="font-bold font-roboto text-[16px] pb-2">
+                  {details3First}
+                </p>
+              </div>
+            )}
+          </>
+        )}
+        {details4First != "none" && (
+          <>
+            <div className="container mx-auto flex justify-between">
+              <h2 className="roboto text-[20px] font-bold uppercase">
+                ПІДКЛАД
+              </h2>
+              <button onClick={toggleAccordion4}>
+                {accordion4Open ? (
+                  <SlArrowUp className="text-[24px]" />
+                ) : (
+                  <SlArrowDown className="text-[24px]" />
+                )}
+              </button>
+            </div>
+            <div className="line w-100% h-[1px] bg-[#BFBFBF] mt-[20px] mb-[20px]"></div>
+            {accordion4Open && (
+              <div>
+                <p className="font-bold font-roboto text-[16px] pb-2">
+                  {details4First}
+                </p>
+              </div>
+            )}
+          </>
         )}
       </div>
       <div className="container mx-auto lg:pb-[100px] p-5 lg:p-0 lg:pt-10">

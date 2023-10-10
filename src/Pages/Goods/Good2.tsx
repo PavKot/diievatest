@@ -37,6 +37,13 @@ const Good2: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={grey}
         colorName="Сірий"
+        details1Name="Пальто прямого крою сіре"
+        details1Desc="Сіре пальто прямого крою з рукавом реглан. Має відкладний комір з широкими лацканами та класичну двобортну застібку з металевими гудзиками. Модель доповнює накладні кишені . Шов  рукава виведено на перед та прикрашено чорною вовняною ниткою, по краях виробу оздоблено прошивкою в колір тканини. Пальто на підкладці з утеплювачем SIimtex. "
+        details2First="60% вовна / wool"
+        details2Second="35% нейлон / nylon"
+        details2Third="5% еластан / elastane"
+        details3First="none"
+        details4First="100% поліестер / polyester"
       />
       <Footer />
     </>

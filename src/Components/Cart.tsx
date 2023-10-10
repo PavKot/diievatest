@@ -68,7 +68,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
   const generatePaymentLink = async () => {
     // This is a simplified example for generating a payment link
     // In a real application, this should be handled securely on the server side
-    const merchantAccount = "www_diieva_com_ua";
+    const merchantAccount = "www_diieva_com_ua1";
     const merchantDomainName = "www.diieva.com.ua";
     const storedCart = localStorage.getItem("cart");
     const orderReference = generatedOrderReference;
@@ -143,13 +143,13 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
 
       const paymentData = {
         transactionType: "CREATE_INVOICE",
-        merchantAccount: "www_diieva_com_ua",
+        merchantAccount: "www_diieva_com_ua1",
         merchantAuthType: "SimpleSignature",
         merchantDomainName: "www.diieva.com.ua",
         merchantSignature: merchant,
         apiVersion: 1,
         language: "ua",
-        serviceUrl: "http://serviceurl.com",
+        serviceUrl: "http://192.168.1.111:5000",
         orderReference: generatedOrderReference,
         orderDate: 1696807119,
         amount: totalPrice,
@@ -217,19 +217,22 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         {storedCart && storedCart.length > 0 ? (
           <div className="flex flex-col gap-2 p-10">
             {JSON.parse(storedCart).map((item: any) => (
-              <div className="flex flex-col gap-2">
+              <>
                 <div className="flex flex-col gap-2">
-                  <div className="flex justify-between">
-                    <p className="font-roboto text-lg">
-                      {item.name} {item.selectedSize}
-                    </p>
-                    <p className="font-roboto text-lg">{item.price}</p>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex justify-between">
+                      <p className="font-roboto text-lg">
+                        {item.name} {item.selectedSize}
+                      </p>
+                      <p className="font-roboto text-lg">{item.price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div className="line h-[2px] w-[85%] border-[1px] border-black mx-auto"></div>
+              </>
             ))}
             <button
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 bg-transparent border-black border-2 text-black font-roboto text-[16px] p-2 mt-2 hover:bg-black hover:text-white rounded"
               onClick={() => {
                 localStorage.removeItem("cart");
                 setCart([]);
@@ -262,7 +265,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
           */}
         </div>
         <button
-          className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2"
+          className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2 hover:bg-white hover:text-black border-2 border-black"
           onClick={() => {
             generatePaymentLink();
           }}

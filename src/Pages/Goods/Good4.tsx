@@ -37,6 +37,13 @@ const Good4: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={blue}
         colorName="Синій"
+        details1Name="Брюки палаццо"
+        details1Desc="Брюки палаццо темно- сині з італійської костюмної вовни дизайну ялинка. Розроблені з низькою посадкою та вільний крій . Модель має бічні кишені, потайна застібка  з боку ."
+        details2First="100 % вовна"
+        details2Second=""
+        details2Third=""
+        details3First="none"
+        details4First="none"
       />
       <Footer />
     </>

@@ -37,6 +37,13 @@ const Good7: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={black}
         colorName="Чорний"
+        details1Name="Брюки завужені чорні"
+        details1Desc="Чорні завужені брюки середньої посадки ззаду на ризинці. Прострочена центральна складка. Модель має бічні кишені, застібаєтся з переду на блискавку та один гудзик."
+        details2First="45% віскоза"
+        details2Second="30% поліестер"
+        details2Third="25% шерсть"
+        details3First="none"
+        details4First="none"
       />
       <Footer />
     </>

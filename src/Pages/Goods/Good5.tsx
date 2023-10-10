@@ -37,6 +37,13 @@ const Good5: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={beige}
         colorName="Бежевий"
+        details1Name="Брюки палаццо бежеві з вовни"
+        details1Desc="Брюки палаццо бежеві з італійської костюмної вовни дизайну градієнтний меланж. Розроблені з низькою посадкою та вільний крій . Модель має бічні кишені, потайна застібка  з боку . "
+        details2First="100% вовна"
+        details2Second=""
+        details2Third=""
+        details3First="none"
+        details4First="none"
       />
       <Footer />
     </>
