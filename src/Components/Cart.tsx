@@ -173,7 +173,9 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
       setFinalLink(response.data.invoiceUrl);
       /* navigate to response.data.invoiceUrl */
       const win = window.open(response.data.invoiceUrl, "_blank");
-      Navigate(response.data.invoiceUrl);
+      /* Navigate(response.data.invoiceUrl); */
+      /* navigate without opening a new tab */
+      window.location.href = response.data.invoiceUrl;
     } catch (error) {
       console.error("Error sending payment data to backend", error);
     }
