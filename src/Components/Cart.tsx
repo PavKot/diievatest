@@ -149,7 +149,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         merchantSignature: merchant,
         apiVersion: 1,
         language: "ua",
-        serviceUrl: "http://35.228.109.35:5001",
+        serviceUrl: "https://35.228.109.35:5001",
         orderReference: generatedOrderReference,
         orderDate: 1696807119,
         amount: totalPrice,
@@ -163,7 +163,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
       console.log(paymentData);
 
       const response = await axios.post(
-        "http://35.228.109.35:5001/process-payment",
+        "https://35.228.109.35:5001/process-payment",
         {
           paymentData,
         }
