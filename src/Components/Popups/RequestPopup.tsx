@@ -21,7 +21,7 @@ const RequestPopup: React.FC<RequestPopupProps> = ({
 
   const handleSend = () => {
     axios
-      .post("http://192.168.1.111:5000/contact", {
+      .post("https://35.228.109.35:5001/contact", {
         name,
         number,
         email,
