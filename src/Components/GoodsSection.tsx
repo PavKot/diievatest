@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsSortUp, BsSortDown } from "react-icons/bs";
 import productData from "../Data/Data";
 import ProductCard from "./ProductCard";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const GoodsSection = () => {
+const GoodsSection = ({}) => {
+  const { category: urlCategory } = useParams();
   const [sortedProducts, setSortedProducts] = useState(
     Object.values(productData)
   );
   const [sortOrder, setSortOrder] = useState("asc");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState(
+    urlCategory || "all"
+  );
+
+  const navigate = useNavigate();
 
   const handleSort = () => {
     const sorted = [...sortedProducts];
@@ -35,7 +42,19 @@ const GoodsSection = () => {
           );
 
     setSortedProducts(filteredProducts);
+    navigate(`/goods/${category}`);
   };
+
+  useEffect(() => {
+    const filteredProducts =
+      selectedCategory === "all"
+        ? Object.values(productData)
+        : Object.values(productData).filter(
+            (product) => product.type === selectedCategory
+          );
+
+    setSortedProducts(filteredProducts);
+  }, [selectedCategory]);
 
   return (
     <>

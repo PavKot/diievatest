@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import navhover from "../Assets/navhover.png";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 interface NavHoverProps {
   show: boolean;
@@ -28,42 +29,44 @@ const NavHover: React.FC<NavHoverProps> = ({ show }) => {
         <div>
           <ul>
             <li className="mt-[16px]">
-              <a href="#">Все</a>
+              <a href="/goods/all">Все</a>
             </li>
             <li className="mt-[16px]">
-              <a href="#">Верхній одяг</a>
+              <a href="/goods/Верхній%20одяг">Верхній одяг</a>
             </li>
             <li className="mt-[16px]">
-              <a href="#">Костюми</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li className="mt-[16px]">
-              <a href="#">Жакети</a>
-            </li>
-            <li className="mt-[16px]">
-              <a href="#">Брюки</a>
-            </li>
-            <li className="mt-[16px]">
-              <a href="#">Спідниці</a>
-            </li>
-            <li className="mt-[16px]">
-              <a href="#">Корсети</a>
+              <a href="/goods/Костюми">Костюми</a>
             </li>
           </ul>
         </div>
         <div>
           <ul>
             <li className="mt-[16px]">
-              <a href="#">Про нас</a>
+              <a href="/goods/Жакети">Жакети</a>
             </li>
             <li className="mt-[16px]">
-              <a href="#">Покупцеві</a>
+              <a href="/goods/Брюки">Брюки</a>
             </li>
             <li className="mt-[16px]">
-              <a href="#">Контакти</a>
+              <a href="/goods/Спідниці">Спідниці</a>
+            </li>
+            <li className="mt-[16px]">
+              <a href="/goods/Корсети">Корсети</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="mt-[16px]">
+              <Link to="/about">Про нас</Link> {/* Use Link for navigation */}
+            </li>
+            <li className="mt-[16px]">
+              <Link to="/customers">Покупцеві</Link>{" "}
+              {/* Use Link for navigation */}
+            </li>
+            <li className="mt-[16px]">
+              <Link to="/contacts">Контакти</Link>{" "}
+              {/* Use Link for navigation */}
             </li>
           </ul>
         </div>

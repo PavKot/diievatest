@@ -15,11 +15,11 @@ const AboutSection = () => {
         <div className="flex max-w-[300px] justify-between pt-[70px] items-center">
           <p>Для зв’язку у соціальних мережах</p>
           <div className="flex">
-            <a href="#">
+            <a href="https://www.instagram.com/diieva.brand/">
               <AiOutlineInstagram className="text-[30px] ml-[10px]" />
             </a>
 
-            <a href="#">
+            <a href="https://www.instagram.com/diieva.brand/">
               <FaFacebookF className="text-[30px] ml-[10px]" />
             </a>
           </div>

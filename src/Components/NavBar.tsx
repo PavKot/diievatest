@@ -20,7 +20,7 @@ interface Link {
 const Links: Link[] = [
   {
     name: "Каталог",
-    url: "/goods",
+    url: "/goods/all",
   },
   {
     name: "Колекції",
