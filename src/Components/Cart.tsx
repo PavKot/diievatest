@@ -149,7 +149,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         merchantSignature: merchant,
         apiVersion: 1,
         language: "ua",
-        serviceUrl: "https://35.228.109.35:5001",
+        serviceUrl: "https://diieva.com.ua/success",
         orderReference: generatedOrderReference,
         orderDate: 1696807119,
         amount: totalPrice,
@@ -172,7 +172,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
       console.log(response);
       setFinalLink(response.data.invoiceUrl);
       /* navigate to response.data.invoiceUrl */
-      const win = window.open(response.data.invoiceUrl, "_blank");
+      /* const win = window.open(response.data.invoiceUrl, "_blank"); */
       /* Navigate(response.data.invoiceUrl); */
       /* navigate without opening a new tab */
       window.location.href = response.data.invoiceUrl;

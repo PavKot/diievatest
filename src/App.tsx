@@ -30,6 +30,7 @@ import Good19 from "./Pages/Goods/Good19";
 import Good20 from "./Pages/Goods/Good20";
 import AboutUs from "./Pages/AboutUs";
 import TestGood1 from "./Pages/Goods/TestGood1";
+import Success from "./Pages/Success";
 
 interface Product {
   name: string;
@@ -57,6 +58,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/success" element={<Success />} />
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/contacts" element={<About />} />
