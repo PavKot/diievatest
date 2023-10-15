@@ -19,7 +19,7 @@ const AboutUsSection = () => {
             <div className="line w-[50px] h-[2px] ml-[24px] bg-[#373737]"></div>
           </div>
           <div className="max-w-[550px]">
-            <p className="roboto text-[14px] lg:p-0 p-5">
+            <p className="roboto text-[14px] lg:p-0 p-5 text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -39,7 +39,7 @@ const AboutUsSection = () => {
             <div className="line w-[50px] h-[2px] ml-[24px] bg-[#373737]"></div>
           </div>
           <div className="max-w-[550px]">
-            <p className="roboto text-[14px] lg:p-0 p-5">
+            <p className="roboto text-[14px] lg:p-0 p-5 text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

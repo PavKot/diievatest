@@ -17,7 +17,7 @@ const CollectionsSection = () => {
         <h4 className="font-roboto text-[20px] font-bold">
           FW’23/24 INCODE: roots matter
         </h4>
-        <p className="pt-[80px]">
+        <p className="pt-[80px] text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -26,7 +26,7 @@ const CollectionsSection = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </p>
-        <p className="pt-[45px]">
+        <p className="pt-[45px] text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -35,7 +35,7 @@ const CollectionsSection = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </p>
-        <p className="pt-[45px]">
+        <p className="pt-[45px] text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
