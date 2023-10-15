@@ -34,6 +34,7 @@ const RequestPopup: React.FC<RequestPopupProps> = ({
       .then((response) => {
         console.log(response);
         toast.success("Ваш запит успішно відправлено!");
+        setRequestPopupOpen(false);
       })
       .catch((error) => {
         console.log(error);
