@@ -40,6 +40,9 @@ interface Props {
   cart?: any;
   toggleCart?: () => void;
   colorImg?: string;
+  color2Img?: string;
+  color2Name?: string;
+  color2Link?: string;
   colorName?: string;
   details1Name?: string;
   details1Desc?: string;
@@ -59,6 +62,9 @@ const GoodLayout: React.FC<Props> = ({
   image5,
   path,
   colorImg,
+  color2Img,
+  color2Name,
+  color2Link,
   colorName,
   addToCart,
   details1Name,
@@ -221,11 +227,28 @@ const GoodLayout: React.FC<Props> = ({
           </div>
           <div className="p-[15px] bg-[#F5F5F5] w-full mt-[50px]">
             <p className="font-bold roboto text-[16px]">Колір</p>
-            <div className="flex items-start flex-col justify-center">
-              <button className="mt-[4px] border-2 px-[5px] py-[5px] border-black">
-                <img src={colorImg} alt={colorName} />
-              </button>
-              <p className=" roboto text-[14px] text-[#7B7B7B]">{colorName}</p>
+            <div className="flex gap-4">
+              <div className="flex items-start flex-col justify-center">
+                <button className="mt-[4px] border-2 px-[5px] py-[5px] border-black">
+                  <img src={colorImg} alt={colorName} />
+                </button>
+                <p className=" roboto text-[14px] text-[#7B7B7B]">
+                  {colorName}
+                </p>
+              </div>
+
+              {color2Img && (
+                <div className="flex items-start flex-col justify-center">
+                  <a href={color2Link}>
+                    <button className="mt-[4px] border-2 px-[5px] py-[5px] border-black">
+                      <img src={color2Img} alt={color2Name} />
+                    </button>
+                  </a>
+                  <p className=" roboto text-[14px] text-[#7B7B7B]">
+                    {color2Name}
+                  </p>
+                </div>
+              )}
             </div>
             <p className="roboto text-[16px] text-[#7B7B7B]">Є в наявності</p>
           </div>
