@@ -9,6 +9,7 @@ import good19_4 from "../../Assets/good19_4.png";
 import good19_5 from "../../Assets/good19_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 import green from "../../Assets/green.png";
+import milk from "../../Assets/milk.png";
 
 interface Props {
   cart: any;
@@ -38,6 +39,9 @@ const Good19: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={green}
         colorName="Зелений"
+        color2Img={milk}
+        color2Name="Молочний"
+        color2Link="/goods/20"
         details1Name="Корсет"
         details1Desc="Темно - зелений корсет з кісточками виготовлений з котонової тканини. Застібка на шнурку по спинці, виконана із основної тканини з металевими люверсами. Модель з фігурними шльовками які з'єднані з основним  корсетом ручною вишивкою яка виконана  технікою Подільське змережування."
         details2First="40% вовна"
