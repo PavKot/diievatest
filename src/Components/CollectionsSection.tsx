@@ -1,6 +1,11 @@
 import React from "react";
 import collection1 from "../Assets/collection1.png";
 import smallcollection1 from "../Assets/smallcollection1.png";
+import smallcollection2 from "../Assets/smallcollection2.png";
+import smallcollection3 from "../Assets/smallcollection3.png";
+import smallcollection4 from "../Assets/smallcollection4.png";
+import smallcollection5 from "../Assets/smallcollection5.png";
+import smallcollection6 from "../Assets/smallcollection6.png";
 
 const CollectionsSection = () => {
   return (
@@ -44,23 +49,29 @@ const CollectionsSection = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </p>
+
         <img
-          src={smallcollection1}
-          alt="Winter - Fall 23 DIIEVA collection"
-          className="pt-[45px]"
-        />
-        <img
-          src={smallcollection1}
+          src={smallcollection2}
           alt="Winter - Fall 23 DIIEVA collection"
           className="pt-[20px]"
         />
         <img
-          src={smallcollection1}
+          src={smallcollection3}
           alt="Winter - Fall 23 DIIEVA collection"
           className="pt-[20px]"
         />
         <img
-          src={smallcollection1}
+          src={smallcollection4}
+          alt="Winter - Fall 23 DIIEVA collection"
+          className="pt-[20px]"
+        />
+        <img
+          src={smallcollection5}
+          alt="Winter - Fall 23 DIIEVA collection"
+          className="pt-[20px]"
+        />
+        <img
+          src={smallcollection6}
           alt="Winter - Fall 23 DIIEVA collection"
           className="pt-[20px]"
         />
