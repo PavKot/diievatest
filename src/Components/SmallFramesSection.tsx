@@ -8,7 +8,7 @@ import smallframe6 from "../Assets/smallframe6.png";
 
 const SmallFramesSection = () => {
   return (
-    <div className="flex mt-[80px] justify-center pb-10 md:flex-row flex-col">
+    <div className="flex mt-[80px] justify-center pb-10 md:flex-row flex-col md:gap-0 gap-5">
       <img src={smallframe1} alt="frame1" className="md:w-[18%]" />
       <img src={smallframe2} alt="frame2" className="md:ml-[20px] md:w-[18%]" />
       <img src={smallframe3} alt="frame3" className="md:ml-[20px] md:w-[18%]" />

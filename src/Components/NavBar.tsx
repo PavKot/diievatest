@@ -80,13 +80,13 @@ const NavBarTest = () => {
           toggleSearch={toggleSearch}
         />
       )}
-      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[20px] sticky bg-blur lg:p-0 p-[18px] lg:py-2">
+      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[5px] pb-[5px] sticky bg-blur lg:p-0 p-[18px] lg:py-2">
         <div className="lg:px-10 2xl:px-0 container mx-auto">
           <div className="flex items-center justify-between">
             <ul
               className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[999] left-0 w-full lg:w-auto md:pl-0 pl-0 w-[400px] ${
                 open
-                  ? "top-[6rem] right-0 bg-darkGreen w-full h-screen flex pt-[6rem] flex-col bg-blur2"
+                  ? "top-[5rem] right-0 bg-darkGreen w-full h-screen flex pt-[6rem] flex-col bg-blur2"
                   : "top-[-490px] right-[-120px]"
               }`}
             >

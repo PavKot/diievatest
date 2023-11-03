@@ -38,8 +38,8 @@ const HeroSection = () => {
       </div>
       <section className="w-full">
         <div className="flex flex-col">
-          <div className="flex w-full max-w-full">
-            <div className="w-[50%]">
+          <div className="flex w-full max-w-full flex-col md:flex-row">
+            <div className="w-[100%] md:w-[50%]">
               <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
@@ -58,7 +58,7 @@ const HeroSection = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <div className="w-[50%]">
+            <div className="w-[100%] md:w-[50%]">
               <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
