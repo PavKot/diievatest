@@ -36,7 +36,7 @@ const HeroSection = () => {
           <img src={bannermob} alt="" className="mx-auto" />
         </a>
       </div>
-      <section className="w-full">
+      <section className="w-full mt-[-8rem]">
         <div className="flex flex-col">
           <div className="flex w-full max-w-full flex-col md:flex-row">
             <div className="w-[100%] md:w-[50%]">
