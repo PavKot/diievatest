@@ -9,6 +9,7 @@ import good5_4 from "../../Assets/good5_4.png";
 import good5_5 from "../../Assets/good5_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 import beige from "../../Assets/beige.png";
+import blue from "../../Assets/blue.png";
 interface Props {
   cart: any;
   setCart: (cart: any) => void;
@@ -37,6 +38,9 @@ const Good5: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={beige}
         colorName="Бежевий"
+        color2Img={blue}
+        color2Name="Синій"
+        color2Link="/goods/4"
         details1Name="Брюки палаццо бежеві з вовни"
         details1Desc="Брюки палаццо бежеві з італійської костюмної вовни дизайну градієнтний меланж. Розроблені з низькою посадкою та вільний крій . Модель має бічні кишені, потайна застібка  з боку . "
         details2First="100% вовна"

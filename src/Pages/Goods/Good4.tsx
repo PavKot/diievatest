@@ -9,6 +9,7 @@ import good4_4 from "../../Assets/good4_4.png";
 import good4_5 from "../../Assets/good4_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 import blue from "../../Assets/blue.png";
+import beige from "../../Assets/beige.png";
 interface Props {
   cart: any;
   setCart: (cart: any) => void;
@@ -37,6 +38,9 @@ const Good4: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={blue}
         colorName="Синій"
+        color2Img={beige}
+        color2Name="Бежевий"
+        color2Link="/goods/5"
         details1Name="Брюки палаццо"
         details1Desc="Брюки палаццо темно- сині з італійської костюмної вовни дизайну ялинка. Розроблені з низькою посадкою та вільний крій . Модель має бічні кишені, потайна застібка  з боку ."
         details2First="100 % вовна"

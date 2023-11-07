@@ -18,7 +18,7 @@ const CollectionsSection = () => {
       <div>
         <img src={collection1} alt="Winter - Fall 23 DIIEVA collection" />
       </div>
-      <div className="2xl:max-w-[600px] max-w-[300px] pl-[20px] md:pl-0">
+      <div className="2xl:max-w-[600px] max-w-[350px] pl-[20px] md:pl-0 mx-auto md:mx-0">
         <h4 className="font-roboto text-[20px] font-bold">
           FW’23/24 INCODE: roots matter
         </h4>

@@ -9,6 +9,7 @@ import good9_4 from "../../Assets/good9_4.png";
 import good9_5 from "../../Assets/good9_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 import beige from "../../Assets/beige.png";
+import blue from "../../Assets/blue.png";
 
 interface Props {
   cart: any;
@@ -37,6 +38,9 @@ const Good9: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         setCart={setCart}
         cart={cart}
         colorImg={beige}
+        color2Img={blue}
+        color2Name="Синій"
+        color2Link="/goods/4"
         colorName="Бежевий"
         details1Name="Жакет бежевий з вовни"
         details1Desc="Жакет  бежевий виготовлений з італійської костюмної вовни дизайну градієнтний меланж. Силует жакету приталений за допомогою акцентних виточок , які з'єднуються українською традиційною вишивкою в техніці Полтавське змережування. Модель з втачним  рукавом та розрізом з низу який доповнює ручна вишивка. Виріб однобортний з асиметричним відкладеним лацканом. Застібаєтся на один гудзик спереду."

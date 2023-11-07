@@ -124,7 +124,7 @@ const NavBarTest = () => {
               <button onClick={toggleSearch}>
                 <CiSearch fontSize={20} />
               </button>
-              <button className="hidden lg:block">
+              <button className="hidden lg:hidden">
                 <GrLanguage fontSize={20} />
               </button>
               <button

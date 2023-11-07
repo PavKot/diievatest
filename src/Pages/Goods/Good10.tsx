@@ -9,6 +9,7 @@ import good10_4 from "../../Assets/good10_4.png";
 import good10_5 from "../../Assets/good10_5.png";
 import ScrollToTop from "../../Components/ScrollToTop";
 import blue from "../../Assets/blue.png";
+import beige from "../../Assets/beige.png";
 
 interface Props {
   cart: any;
@@ -38,6 +39,9 @@ const Good10: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         cart={cart}
         colorImg={blue}
         colorName="Синій"
+        color2Img={beige}
+        color2Name="Бежевий"
+        color2Link="/goods/9"
         details1Name="Жакет"
         details1Desc="Жакет темно-синій виготовлений з італійської костюмної вовни дизайну ялинка. Силует жакету приталений за допомогою акцентних виточок , які з'єднуються українською традиційною вишивкою в техніці Полтавське змережування. Модель з втачним  рукавом та розрізом з низу який доповнює ручна вишивка. Виріб однобортний з асиметричним відкладеним лацканом. Застібаєтся на один гудзик спереду."
         details2First="63 % вовна"

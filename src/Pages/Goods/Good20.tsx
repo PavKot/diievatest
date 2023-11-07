@@ -44,9 +44,9 @@ const Good20: React.FC<Props> = ({ cart, setCart, addToCart }) => {
         color2Link="/goods/19"
         details1Name="Корсет"
         details1Desc="Молочний корсет з кісточками виготовлений з котонової тканини. Застібка на шнурку по спинці, виконана із основної тканини з металевими люверсами. Модель з фігурними шльовками які з'єднані з основним  корсетом ручною вишивкою яка виконана  технікою Подільське змережування. "
-        details2First="40% вовна"
-        details2Second="40% акрил"
-        details2Third="20% віскоза"
+        details2First="100% бавовна"
+        details2Second=""
+        details2Third=""
         details3First="100% льон"
         details4First="none"
       />
