@@ -39,6 +39,7 @@ const Links: Link[] = [
     url: "/about",
   },
 ];
+declare const fbq: any;
 
 const NavBarTest = () => {
   const [open, setOpen] = useState(false);
@@ -53,6 +54,7 @@ const NavBarTest = () => {
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
+    fbq("track", "Search");
   };
 
   // State to track if the "Каталог" or "Покупцеві" elements are being hovered
