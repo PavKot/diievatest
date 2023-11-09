@@ -11,6 +11,7 @@ import GlobalSearch from "./Popups/GlobalSearch";
 import productData from "../Data/Data";
 import { BiChevronDown } from "react-icons/bi";
 import NavHover from "./NavHover";
+import { useEffect } from "react";
 
 interface Link {
   name: string;
@@ -40,7 +41,9 @@ const Links: Link[] = [
   },
 ];
 declare const fbq: any;
-
+useEffect(() => {
+  console.log(fbq);
+}, []);
 const NavBarTest = () => {
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +53,7 @@ const NavBarTest = () => {
   const toggleCart = () => {
     setIsOpen(!isOpen);
     console.log("opened");
+    fbq("track", "AddToCart");
   };
 
   const toggleSearch = () => {
