@@ -41,9 +41,7 @@ const Links: Link[] = [
   },
 ];
 declare const fbq: any;
-useEffect(() => {
-  console.log(fbq);
-}, []);
+
 const NavBarTest = () => {
   const [open, setOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
