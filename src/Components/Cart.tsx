@@ -10,6 +10,7 @@ interface CartProps {
   toggleCart: () => void;
   isOpen: boolean;
 }
+declare const fbq: any;
 
 const Cart = ({ toggleCart, isOpen }: CartProps) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -270,6 +271,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
           className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2 hover:bg-white hover:text-black border-2 border-black"
           onClick={() => {
             generatePaymentLink();
+            fbq("track", "Purchase", { value: totalPrice, currency: "UAH" });
           }}
         >
           Оформити замовлення
