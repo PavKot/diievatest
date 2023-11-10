@@ -1,6 +1,16 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+declare const fbq: any;
 const SuccessSection = () => {
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    const parsedCart = storedCart ? JSON.parse(storedCart) : [];
+    console.log(parsedCart);
+    console.log(storedCart);
+    const cartPrice = parsedCart.map((item: any) => {
+      return item.price;
+    });
+    fbq("track", "Purchase", { value: cartPrice, currency: "UAH" });
+  }, []);
   return (
     <div className="flex justify-center items-center py-[30vh]">
       <div className="text-center">
