@@ -6,10 +6,11 @@ const SuccessSection = () => {
     const parsedCart = storedCart ? JSON.parse(storedCart) : [];
     console.log(parsedCart);
     console.log(storedCart);
-    const cartPrice = parsedCart.reduce((acc: any, item: any) => {
-      return Number(item.price);
-    }, 0);
-    fbq("track", "Purchase", { value: cartPrice, currency: "UAH" });
+    const cartPrice = parsedCart.map((item: any) => {
+      return item.price;
+    });
+    const totalPrice = cartPrice.reduce((a: any, b: any) => a + b);
+    fbq("track", "Purchase", { value: totalPrice, currency: "UAH" });
     localStorage.removeItem("cart");
   }, []);
   return (
