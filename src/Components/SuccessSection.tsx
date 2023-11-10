@@ -7,8 +7,9 @@ const SuccessSection = () => {
     console.log(parsedCart);
     console.log(storedCart);
     const cartPrice = parsedCart.map((item: any) => {
-      return item.price;
+      return parseFloat(item.price);
     });
+
     const totalPrice = cartPrice.reduce((a: any, b: any) => a + b, 0);
     fbq("track", "Purchase", { value: totalPrice, currency: "UAH" });
     localStorage.removeItem("cart");
