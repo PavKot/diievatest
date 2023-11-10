@@ -151,7 +151,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         apiVersion: 1,
         language: "ua",
         serviceUrl: "https://diieva.com.ua/success",
-        returnUrl: "https://diieva.com.ua/success",
+        returnUrl: "https://35.228.109.35:5001/checkPurschase",
         orderReference: generatedOrderReference,
         orderDate: 1696807119,
         amount: totalPrice,
