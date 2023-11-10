@@ -6,9 +6,9 @@ const SuccessSection = () => {
     const parsedCart = storedCart ? JSON.parse(storedCart) : [];
     console.log(parsedCart);
     console.log(storedCart);
-    const cartPrice = parsedCart.map((item: any) => {
-      return item.price;
-    });
+    const cartPrice = parsedCart.reduce((acc: any, item: any) => {
+      return acc + Number(item.price);
+    }, 0);
     fbq("track", "Purchase", { value: cartPrice, currency: "UAH" });
     localStorage.removeItem("cart");
   }, []);
