@@ -10,6 +10,7 @@ const SuccessSection = () => {
       return item.price;
     });
     fbq("track", "Purchase", { value: cartPrice, currency: "UAH" });
+    localStorage.removeItem("cart");
   }, []);
   return (
     <div className="flex justify-center items-center py-[30vh]">

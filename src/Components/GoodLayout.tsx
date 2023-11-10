@@ -16,6 +16,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./Cart";
 import RequestPopup from "./Popups/RequestPopup";
+declare const fbq: any;
 
 interface Product {
   name: string;
@@ -265,6 +266,7 @@ const GoodLayout: React.FC<Props> = ({
               });
               toast.success("Товар додано до кошика");
               toggleCart();
+              fbq("track", "AddToCart");
               /*
               setTimeout(() => {
                 window.location.reload();
