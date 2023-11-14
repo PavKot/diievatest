@@ -58,7 +58,7 @@ const Home = () => {
 
       <FramesSection />
       <HomeCollectionSection
-        collectionName="FW 2023 Drop Fall"
+        collectionName="FW’23/24 Drop collection"
         image1={card4}
         link1="/goods/17"
         image1hover={card4hover}
@@ -79,7 +79,7 @@ const Home = () => {
         type3="Жакети"
       />
       <HomeCollectionSection
-        collectionName="FW 2023 Drop Fall"
+        collectionName="FW’23/24 Drop collection"
         image1={card7}
         image1hover={card7hover}
         link1="/goods/6"
