@@ -1,5 +1,6 @@
 import React from "react";
 import collection1 from "../Assets/collection1.png";
+import collectionMobile from "../Assets/collectionMobile.png";
 import smallcollection1 from "../Assets/smallcollection1.png";
 import smallcollection2 from "../Assets/smallcollection2.png";
 import smallcollection3 from "../Assets/smallcollection3.png";
@@ -15,8 +16,11 @@ const CollectionsSection = () => {
           FW’23/24 INCODE: roots matter
         </h4>
       </div>
-      <div>
+      <div className="md:block hidden">
         <img src={collection1} alt="Winter - Fall 23 DIIEVA collection" />
+      </div>
+      <div className="md:hidden block">
+        <img src={collectionMobile} alt="Winter - Fall 23 DIIEVA collection" />
       </div>
       <div className="2xl:max-w-[600px] max-w-[350px] pl-[20px] md:pl-0 mx-auto md:mx-0">
         <h4 className="font-roboto text-[20px] font-bold">
