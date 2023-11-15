@@ -66,13 +66,13 @@ const Footer = () => {
                 <AiOutlineInstagram className="text-[30px] text-white" />
               </a>
 
-              <a href="https://www.instagram.com/diieva.brand/">
+              <a href="https://www.facebook.com/profile.php?id=61553048443427">
                 <FaFacebookF className="text-[30px] ml-[10px] text-white" />
               </a>
             </div>
             <ul className="md:pt-[50px] pt-[20px] text-white">
               <li>
-                <a href="#" className="uppercase">
+                <a href="/contacts" className="uppercase">
                   Customer support
                 </a>
               </li>
