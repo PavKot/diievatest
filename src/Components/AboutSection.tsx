@@ -9,7 +9,7 @@ const AboutSection = () => {
       <div className="container mx-auto p-5 lg:p-0">
         <p className="text-[16px] font-roboto">Клієнтська підтримка</p>
         <h1 className="text-[32px] font-bold font-roboto pt-[40px]">
-          + 38073 219 79 16
+          +380 73 219 79 16
         </h1>
 
         <div className="flex max-w-[300px] justify-between pt-[70px] items-center">
@@ -19,7 +19,7 @@ const AboutSection = () => {
               <AiOutlineInstagram className="text-[30px] ml-[10px]" />
             </a>
 
-            <a href="https://www.instagram.com/diieva.brand/">
+            <a href="https://www.facebook.com/profile.php?id=61553048443427">
               <FaFacebookF className="text-[30px] ml-[10px]" />
             </a>
           </div>
