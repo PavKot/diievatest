@@ -9,7 +9,7 @@ const AboutSection = () => {
       <div className="container mx-auto p-5 lg:p-0">
         <p className="text-[16px] font-roboto">Клієнтська підтримка</p>
         <h1 className="text-[32px] font-bold font-roboto pt-[40px]">
-          +380 73 219 79 16
+          <a href="tel:380732197916">+380 73 219 79 16 </a>
         </h1>
 
         <div className="flex max-w-[300px] justify-between pt-[70px] items-center">
