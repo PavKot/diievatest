@@ -12,7 +12,7 @@ const CollectionsSection = () => {
   return (
     <div className="flex justify-between container mx-auto pb-[200px] flex-col md:flex-row">
       <div>
-        <h4 className="font-roboto text-[16px] font-bold">
+        <h4 className="font-roboto text-[16px] font-bold hidden md:block">
           FW’23/24 INCODE: roots matter
         </h4>
       </div>
@@ -23,10 +23,10 @@ const CollectionsSection = () => {
         <img src={collectionMobile} alt="Winter - Fall 23 DIIEVA collection" />
       </div>
       <div className="2xl:max-w-[600px] max-w-[350px] pl-[20px] md:pl-0 mx-auto md:mx-0">
-        <h4 className="font-roboto text-[20px] font-bold">
+        <h4 className="font-roboto text-[20px] font-bold hidden md:block">
           FW’23/24 INCODE: roots matter
         </h4>
-        <p className="pt-[80px]">
+        <p className="md:pt-[80px] pt-[25px]">
           Дебютна колекція FW` 23/24 INCODE: roots matter – це втілення
           сучасності, традиційності та краси. В колекції закладена концепція
           поєднання розслаблених силуетів та напівприталених класичних форм з
