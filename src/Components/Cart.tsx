@@ -270,9 +270,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
           <p className="font-roboto text-lg p-10">Кошик порожній</p>
         )}
         <div className="p-10">
-          <p className="font-roboto text-lg color-[#B31312]">
-            ПРОМОКОД: friday
-          </p>
+          <p className="font-roboto text-lg text-[#B31312]">ПРОМОКОД: friday</p>
           <p className="font-roboto text-lg">Всього</p>
           <p className="font-roboto text-lg">{totalPrice} UAH</p>
 
