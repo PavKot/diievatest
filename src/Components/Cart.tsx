@@ -53,7 +53,22 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
 "productCount":[1, 1, 1, 1]
 }
   */
-
+  useEffect(() => {
+    /* black friday -13% */
+    const storedCart = localStorage.getItem("cart");
+    const parsedCart = storedCart ? JSON.parse(storedCart) : [];
+    const blackFriday = parsedCart.map((item: any) => {
+      const newPrice = item.price - item.price * 0.13;
+      return newPrice.toFixed(0);
+    });
+    const blackFridayCart = parsedCart.map((item: any, index: number) => {
+      item.price = blackFriday[index];
+      return item;
+    });
+    localStorage.setItem("cart", JSON.stringify(blackFridayCart));
+    setCart(blackFridayCart);
+    calculateTotalPrice(JSON.stringify(blackFridayCart));
+  }, []);
   const calculateTotalPrice = (cartItems: string | null) => {
     if (cartItems) {
       const parsedCart = JSON.parse(cartItems);
@@ -253,6 +268,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
           <p className="font-roboto text-lg p-10">Кошик порожній</p>
         )}
         <div className="p-10">
+          <p className="font-roboto text-lg p-10">Чорна пятниця SALE</p>
           <p className="font-roboto text-lg">Всього</p>
           <p className="font-roboto text-lg">{totalPrice} UAH</p>
 
