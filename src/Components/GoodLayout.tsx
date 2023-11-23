@@ -255,9 +255,19 @@ const GoodLayout: React.FC<Props> = ({
           </div>
           <button
             onClick={() => {
-              addToCart({
+              /*  addToCart({
                 name,
                 price,
+                image1,
+                image2,
+                image3,
+                image4,
+                selectedSize,
+              }); */
+              /* black friday -13% */
+              addToCart({
+                name,
+                price: (parseInt(price) * 0.87).toString(),
                 image1,
                 image2,
                 image3,
