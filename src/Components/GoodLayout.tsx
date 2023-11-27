@@ -255,7 +255,7 @@ const GoodLayout: React.FC<Props> = ({
           </div>
           <button
             onClick={() => {
-              /*  addToCart({
+              addToCart({
                 name,
                 price,
                 image1,
@@ -263,8 +263,8 @@ const GoodLayout: React.FC<Props> = ({
                 image3,
                 image4,
                 selectedSize,
-              }); */
-              /* black friday -13% */
+              });
+              /* black friday -13%
               addToCart({
                 name,
                 price: (parseInt(price) * 0.87).toString(),
@@ -274,6 +274,7 @@ const GoodLayout: React.FC<Props> = ({
                 image4,
                 selectedSize,
               });
+              */
               toast.success("Товар додано до кошика");
               toggleCart();
               fbq("track", "AddToCart");
