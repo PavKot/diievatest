@@ -85,7 +85,8 @@ const NavBarTest = () => {
         />
       )}
 
-      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-10 pb-[5px] sticky bg-blur lg:p-0 p-[18px] lg:py-2 lg:pt-10">
+      <div className="backdrop-blur-5.6 w-full top-0 left-0 z-[999] mx-auto pt-[5px] pb-[5px] sticky bg-blur lg:p-0 p-[18px] lg:py-2">
+        {" "}
         <div className="lg:px-10 2xl:px-0 container mx-auto">
           <div className="flex items-center justify-between">
             <ul
