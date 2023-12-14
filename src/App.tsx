@@ -31,6 +31,8 @@ import Good20 from "./Pages/Goods/Good20";
 import AboutUs from "./Pages/AboutUs";
 import TestGood1 from "./Pages/Goods/TestGood1";
 import Success from "./Pages/Success";
+import ProcessOrder from "./Pages/ProcessOrder";
+import SuccessOrder from "./Pages/SuccessOrder";
 
 interface Product {
   name: string;
@@ -67,6 +69,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/goods/:category" element={<Goods />} />
           <Route path="/good" element={<Good />} />
+          <Route path="/process-order" element={<ProcessOrder />} />
+          <Route path="/successOrder" element={<SuccessOrder />} />
           <Route
             path="/goods/1"
             element={

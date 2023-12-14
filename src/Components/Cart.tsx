@@ -198,6 +198,9 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
       console.error("Error sending payment data to backend", error);
     }
   };
+  const createPayment = async () => {
+    window.location.href = "/process-order";
+  };
 
   return (
     <>
@@ -291,7 +294,16 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
             fbq("track", "InitiateCheckout");
           }}
         >
-          Оформити замовлення
+          Оплата на сайті
+        </button>
+        <button
+          className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2 hover:bg-white hover:text-black border-2 border-black"
+          onClick={() => {
+            createPayment();
+            fbq("track", "InitiateCheckout");
+          }}
+        >
+          Оплата на пошті
         </button>
       </div>
     </>
