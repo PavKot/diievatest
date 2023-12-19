@@ -287,6 +287,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
           )}
           */}
         </div>
+        {/*
         <button
           className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2 hover:bg-white hover:text-black border-2 border-black"
           onClick={() => {
@@ -296,6 +297,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
         >
           Оплата на сайті
         </button>
+        */}
         <button
           className="mb-5 w-[100%] bg-black text-white font-roboto font-bold text-[20px] p-2 mt-2 hover:bg-white hover:text-black border-2 border-black"
           onClick={() => {
@@ -303,7 +305,7 @@ const Cart = ({ toggleCart, isOpen }: CartProps) => {
             fbq("track", "InitiateCheckout");
           }}
         >
-          Оплата на пошті
+          Оформити замовлення
         </button>
       </div>
     </>
