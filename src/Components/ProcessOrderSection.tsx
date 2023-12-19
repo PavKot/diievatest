@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
+declare const fbq: any;
 
 const ProcessOrderSection = () => {
   const [itemNames, setItemNames] = useState([] as any);
@@ -292,7 +293,10 @@ const ProcessOrderSection = () => {
                 required
               />
               <button
-                onClick={handleSend}
+                onClick={() => {
+                  fbq("track", "Purchase");
+                  handleSend();
+                }}
                 className="mb-5 bg-white border-[1px] border-black text-black font-roboto text-[20px] p-2 mt-2"
               >
                 ЗАМОВИТИ
@@ -303,7 +307,10 @@ const ProcessOrderSection = () => {
       )}{" "}
       {method === "Оплата на сайті" && (
         <button
-          onClick={handleOnline}
+          onClick={() => {
+            fbq("track", "Purchase");
+            handleOnline();
+          }}
           className="mb-5 bg-white border-[1px] border-black text-black font-roboto text-[20px] p-2 mt-2 text-center mx-auto block"
         >
           Перейти до онлайн-оплати(WAY4PAY)
