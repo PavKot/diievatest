@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const GoodsSection = ({}) => {
+  const [sortOnLoad, setSortOnLoad] = useState(0);
   const { category: urlCategory } = useParams();
   const [sortedProducts, setSortedProducts] = useState(
     Object.values(productData)
@@ -16,6 +17,21 @@ const GoodsSection = ({}) => {
   );
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (sortOnLoad === 0) {
+      const sorted = [...sortedProducts];
+      sorted.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+      setSortedProducts(sorted);
+      setSortOrder("desc");
+    }
+  }, [sortedProducts]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSortOnLoad(1);
+    }, 100);
+  }, []);
 
   const handleSort = () => {
     const sorted = [...sortedProducts];
@@ -28,10 +44,6 @@ const GoodsSection = ({}) => {
     }
     setSortedProducts(sorted);
   };
-
-  useEffect(() => {
-    handleSort();
-  }, []);
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const category = e.target.value;
@@ -70,7 +82,12 @@ const GoodsSection = ({}) => {
           <p className="text-[15px] font-bold font-roboto pt-[11px]">ВСЕ</p>
         </div>
         <div className="flex gap-10">
-          <button className="flex items-center gap-3" onClick={handleSort}>
+          <button
+            className="flex items-center gap-3"
+            onClick={() => {
+              handleSort();
+            }}
+          >
             Сортувати
             {sortOrder === "asc" ? (
               <BsSortUp className="text-[24px]" />
