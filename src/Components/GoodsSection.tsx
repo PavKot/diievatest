@@ -10,7 +10,7 @@ const GoodsSection = ({}) => {
   const [sortedProducts, setSortedProducts] = useState(
     Object.values(productData)
   );
-  const [sortOrder, setSortOrder] = useState("desc");
+  const [sortOrder, setSortOrder] = useState("asc");
   const [selectedCategory, setSelectedCategory] = useState(
     urlCategory || "all"
   );
@@ -28,6 +28,10 @@ const GoodsSection = ({}) => {
     }
     setSortedProducts(sorted);
   };
+
+  useEffect(() => {
+    handleSort();
+  }, []);
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const category = e.target.value;
