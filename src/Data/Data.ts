@@ -37,6 +37,8 @@ import product16 from "../Assets/product16.png";
 import product17 from "../Assets/product17.png";
 import product18 from "../Assets/product18.png";
 import product19 from "../Assets/product19.png";
+import product21 from "../Assets/product21.png";
+import product22 from "../Assets/product22.png";
 
 const productData = {
   product1: {
@@ -209,6 +211,24 @@ const productData = {
     price: "11 900 ₴",
     link: "/goods/2",
     type: "Верхній одяг",
+  },
+  product21: {
+    collectionName: "Одяг",
+    image: product21,
+    imageHover: product21,
+    name: "Корсетна сукня / Чорна",
+    price: "9700 ₴",
+    link: "/goods/21",
+    type: "Сукні",
+  },
+  product22: {
+    collectionName: "Аксесуари",
+    image: product22,
+    imageHover: product22,
+    name: "Стрічковий ґердан",
+    price: "2700 ₴",
+    link: "/goods/22",
+    type: "Сукні",
   },
 };
 

@@ -28,11 +28,13 @@ import Good17 from "./Pages/Goods/Good17";
 import Good18 from "./Pages/Goods/Good18";
 import Good19 from "./Pages/Goods/Good19";
 import Good20 from "./Pages/Goods/Good20";
+import Good21 from "./Pages/Goods/Good21";
 import AboutUs from "./Pages/AboutUs";
 import TestGood1 from "./Pages/Goods/TestGood1";
 import Success from "./Pages/Success";
 import ProcessOrder from "./Pages/ProcessOrder";
 import SuccessOrder from "./Pages/SuccessOrder";
+import Good22 from "./Pages/Goods/Good22";
 
 interface Product {
   name: string;
@@ -183,6 +185,18 @@ function App() {
             path="/goods/20"
             element={
               <Good20 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/21"
+            element={
+              <Good21 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/22"
+            element={
+              <Good22 cart={cart} setCart={setCart} addToCart={addToCart} />
             }
           />
           <Route
