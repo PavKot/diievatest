@@ -35,6 +35,10 @@ import Success from "./Pages/Success";
 import ProcessOrder from "./Pages/ProcessOrder";
 import SuccessOrder from "./Pages/SuccessOrder";
 import Good22 from "./Pages/Goods/Good22";
+import Good23 from "./Pages/Goods/Good23";
+import Good24 from "./Pages/Goods/Good24";
+import Good25 from "./Pages/Goods/Good25";
+import Good26 from "./Pages/Goods/Good26";
 
 interface Product {
   name: string;
@@ -197,6 +201,30 @@ function App() {
             path="/goods/22"
             element={
               <Good22 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/23"
+            element={
+              <Good23 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/24"
+            element={
+              <Good24 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/25"
+            element={
+              <Good25 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/26"
+            element={
+              <Good26 cart={cart} setCart={setCart} addToCart={addToCart} />
             }
           />
           <Route

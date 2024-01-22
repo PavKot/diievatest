@@ -39,6 +39,11 @@ import product18 from "../Assets/product18.png";
 import product19 from "../Assets/product19.png";
 import product21 from "../Assets/product21.png";
 import product22 from "../Assets/product22.png";
+import product23 from "../Assets/product23.png";
+import product24 from "../Assets/product24.png";
+import product25 from "../Assets/product25.png";
+import product26 from "../Assets/product26.png";
+import product27 from "../Assets/product27.png";
 
 const productData = {
   product1: {
@@ -228,7 +233,52 @@ const productData = {
     name: "Стрічковий ґердан",
     price: "2700 ₴",
     link: "/goods/22",
-    type: "Сукні",
+    type: "Аксесуари",
+  },
+  product23: {
+    collectionName: "Аксесуари",
+    image: product23,
+    imageHover: product23,
+    name: "Золотий ґердан",
+    price: "2700 ₴",
+    link: "/goods/23",
+    type: "Аксесуари",
+  },
+  product24: {
+    collectionName: "Аксесуари",
+    image: product24,
+    imageHover: product24,
+    name: "Ґердан рожевий",
+    price: "2500 ₴",
+    link: "/goods/24",
+    type: "Аксесуари",
+  },
+  product25: {
+    collectionName: "Аксесуари",
+    image: product25,
+    imageHover: product25,
+    name: "Ґердан срібний",
+    price: "2500 ₴",
+    link: "/goods/25",
+    type: "Аксесуари",
+  },
+  product26: {
+    collectionName: "Аксесуари",
+    image: product26,
+    imageHover: product26,
+    name: "Чорний котильйон",
+    price: "1400 ₴",
+    link: "/goods/26",
+    type: "Аксесуари",
+  },
+  product27: {
+    collectionName: "Аксесуари",
+    image: product27,
+    imageHover: product27,
+    name: "Червоний котильйон",
+    price: "1400 ₴",
+    link: "/goods/26",
+    type: "Аксесуари",
   },
 };
 
