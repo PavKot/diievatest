@@ -18,7 +18,7 @@ interface Props {
   addToCart: (item: any) => void;
 }
 
-const Good28: React.FC<Props> = ({ cart, setCart, addToCart }) => {
+const Good29: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   return (
     <>
       <NavBar />
@@ -54,4 +54,4 @@ const Good28: React.FC<Props> = ({ cart, setCart, addToCart }) => {
   );
 };
 
-export default Good28;
+export default Good29;
