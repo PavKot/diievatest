@@ -39,6 +39,8 @@ import Good23 from "./Pages/Goods/Good23";
 import Good24 from "./Pages/Goods/Good24";
 import Good25 from "./Pages/Goods/Good25";
 import Good26 from "./Pages/Goods/Good26";
+import Good27 from "./Pages/Goods/Good27";
+import Good28 from "./Pages/Goods/Good28";
 
 interface Product {
   name: string;
@@ -225,6 +227,18 @@ function App() {
             path="/goods/26"
             element={
               <Good26 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/27"
+            element={
+              <Good27 cart={cart} setCart={setCart} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/goods/28"
+            element={
+              <Good28 cart={cart} setCart={setCart} addToCart={addToCart} />
             }
           />
           <Route

@@ -44,6 +44,8 @@ import product24 from "../Assets/product24.png";
 import product25 from "../Assets/product25.png";
 import product26 from "../Assets/product26.png";
 import product27 from "../Assets/product27.png";
+import product28 from "../Assets/product28.png";
+import product29 from "../Assets/product29.png";
 
 const productData = {
   product1: {
@@ -277,7 +279,25 @@ const productData = {
     imageHover: product27,
     name: "Червоний котильйон",
     price: "1400 ₴",
-    link: "/goods/26",
+    link: "/goods/27",
+    type: "Аксесуари",
+  },
+  product28: {
+    collectionName: "Аксесуари",
+    image: product28,
+    imageHover: product28,
+    name: "Чорна силянка",
+    price: "1950 ₴",
+    link: "/goods/28",
+    type: "Аксесуари",
+  },
+  product29: {
+    collectionName: "Аксесуари",
+    image: product29,
+    imageHover: product29,
+    name: "Прозора силянка",
+    price: "1950 ₴",
+    link: "/goods/29",
     type: "Аксесуари",
   },
 };
